@@ -1,0 +1,54 @@
+import React from 'react';
+import { ShieldCheck, Truck, Wrench } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+const services = [
+  {
+    title: 'Passenger E-Rickshaw',
+    icon: <ShieldCheck className="w-10 h-10 text-blue-600" />,
+    description:
+      'Comfortable, cost-effective, and eco-friendly rides for daily commuters in urban and semi-urban areas.',
+  },
+  {
+    title: 'Cargo E-Rickshaw',
+    icon: <Truck className="w-10 h-10 text-green-600" />,
+    description:
+      'Efficient electric transport solution for delivery and logistics businesses with optimized payload capacity.',
+  },
+  {
+    title: 'Maintenance & Support',
+    icon: <Wrench className="w-10 h-10 text-yellow-500" />,
+    description:
+      'Dedicated nationwide support and regular maintenance packages to keep your rickshaw running smoothly.',
+  },
+];
+
+const ServicePage = () => {
+  return (
+    <Layout>
+            <section className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-cyan-50 py-20 px-6 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+        <p className="text-blue-700 text-lg max-w-3xl mx-auto">
+          We offer a wide range of electric mobility solutions and services designed to meet the evolving needs of drivers, businesses, and communities.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white border-t-4 border-blue-600 rounded-xl shadow-lg p-6 text-center transition hover:shadow-2xl hover:scale-[1.02] duration-300"
+          >
+            <div className="mb-4 flex justify-center">{service.icon}</div>
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">{service.title}</h3>
+            <p className="text-blue-700 text-base leading-relaxed">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    </Layout>
+  );
+};
+
+export default ServicePage;
