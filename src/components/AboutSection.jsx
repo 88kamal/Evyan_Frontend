@@ -32,19 +32,20 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Right Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="w-full flex justify-center"
-        >
-          <img
-            src="../../about.png" // Replace with your own
-            alt="Electric Auto Evyan"
-            className="max-w-md w-full object-contain rounded-lg shadow-lg"
-          />
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+  className="w-full flex justify-center"
+>
+  <img
+    src="../../about.png" // Replace with your actual image path
+    alt="Electric Auto Evyan"
+    className="max-w-md w-full object-contain rounded-lg shadow-lg"
+  />
+</motion.div>
+
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ import myContext from '../context/myContext';
 
 const ShareModal = () => {
     const [open, setOpen] = useState(false);
-    const websiteUrl = "https://www.rideroz.com";
+    const websiteUrl = "https://evyan-frontend.vercel.app";
     const { showAlert } = useContext(myContext);
 
     const handleCopy = () => {
