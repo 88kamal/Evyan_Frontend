@@ -7,6 +7,7 @@ import {
   PhoneCall,
   MapPin,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -25,11 +26,10 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm text-blue-100">
-            <li><a href="#" className="hover:text-white transition">Home</a></li>
-            <li><a href="#" className="hover:text-white transition">About</a></li>
-            <li><a href="#" className="hover:text-white transition">Products</a></li>
-            <li><a href="#" className="hover:text-white transition">FAQ</a></li>
-            <li><a href="#" className="hover:text-white transition">Contact</a></li>
+            <li><Link to={'/'} className="hover:text-white transition">Home</Link></li>
+            <li><Link to={'/about'} className="hover:text-white transition">About</Link></li>
+            <li><Link to={'/all-products'} className="hover:text-white transition">Products</Link></li>
+            <li><Link to={'/contact'} className="hover:text-white transition">Contact</Link></li>
           </ul>
         </div>
 

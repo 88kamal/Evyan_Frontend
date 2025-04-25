@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -68,9 +69,11 @@ const HeroSection = () => {
             <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition">
               Get a Quote
             </button>
-            <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-md text-lg hover:bg-blue-600 hover:text-white transition">
+            <Link to={'/all-products'}>
+             <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-md text-lg hover:bg-blue-600 hover:text-white transition">
               Explore Models
             </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
