@@ -1,21 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardBody, Typography, Button } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 const products = [
   {
     name: 'Evyan Passenger E-Rickshaw',
-    image: '../../1.png',
+    image: '../../img/1.png',
     description: 'Designed for comfortable city commuting with high range and low maintenance.',
   },
   {
     name: 'Evyan Cargo E-Rickshaw',
-    image: '../../2.png',
+    image: '../../img/2.png',
     description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
   },
   {
     name: 'Evyan School E-Rickshaw',
-    image: '../../3.png',
+    image: '../../img/3.png',
     description: 'Safe and eco-friendly transportation option for school routes and institutions.',
   },
 ];
@@ -81,6 +82,20 @@ const ProductRangeSection = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  className="mt-12 text-center"
+>
+  <Link to="/all-products">
+    <Button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-2 text-lg font-medium rounded-md">
+      View More Products
+    </Button>
+  </Link>
+</motion.div>
     </section>
   );
 };

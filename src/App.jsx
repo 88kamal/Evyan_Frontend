@@ -10,6 +10,7 @@ import NoPage from "./pages/NoPage";
 import MyState from "./context/myState";
 import ServicePage from "./pages/ServicePage";
 import ScrollTop from "./components/scrollTop";
+import AllProductsPage from "./pages/AllProductsPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={ <AboutPage/> } />
         <Route path="/contact" element={ <ContactPage/> } />
         <Route path="/services" element={ <ServicePage/> } />
+        <Route path="/all-products" element={ <AllProductsPage/> } />
         <Route path="/*" element={ <NoPage/> } />
        </Routes>
       </Router>

@@ -40,7 +40,7 @@ const AboutSection = () => {
   className="w-full flex justify-center"
 >
   <img
-    src="../../about.png" // Replace with your actual image path
+    src="../../img/5.png" // Replace with your actual image path
     alt="Electric Auto Evyan"
     className="max-w-md w-full object-contain rounded-lg shadow-lg"
   />

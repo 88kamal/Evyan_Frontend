@@ -22,11 +22,16 @@ const AboutPage = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-800 mb-6">
               About <span className="text-cyan-600">Evyan</span>
             </h1>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
-              Evyan is a forward-thinking electric vehicle company transforming how cities move. We focus on building sustainable, reliable, and high-performance electric rickshaws that support clean energy adoption across India.
+            <p className="text-gray-900 text-base sm:text-lg leading-relaxed mb-6">
+Navyabharat Evyan Motors Pvt Ltd (NEMPL) is into Business of Design, Development, Manufacturing, 
+Assembling, Sales & Services of Battery Operated Electric Vehicles. NEMPL Products Include E-Rick
+shaw,  E-Auto, E-Scooty, E-Cycles etc. Our USP is 100% Indian Product with Excellence in Quality, Relia
+bility and Support After Sales. 
             </p>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              With innovation at our core, we are committed to creating transport solutions that are cost-efficient and eco-conscious. From passenger vehicles to cargo and school transport, Evyan’s e-rickshaws offer versatility and value — all backed by excellent after-sales service and nationwide support.
+            <p className="text-gray-900 text-base sm:text-lg leading-relaxed">
+            All our Models having Best Quality Paint CED Coating/ PT Liquid Paint with upto 1 Year Warranty and 
+Double Support CR Chassis with upto 3 Year Warranty. Beyond that we also Provide Warranty for Motor 
+and Controller, Battery, and other Accessories for upto 15 Months.
             </p>
           </motion.div>
         </section>

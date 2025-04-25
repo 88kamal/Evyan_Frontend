@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection'
 import AboutSection from '../components/AboutSection'
 import ProductRangeSection from '../components/ProductRangeSection'
 import FaqSection from '../components/FaqSection'
+import PromotersProfile from '../components/PromotersProfile'
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
         <AboutSection/>
         <ProductRangeSection/>
         <FaqSection/>
+        <PromotersProfile/>
     </Layout>
   )
 }
