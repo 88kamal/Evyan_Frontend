@@ -75,11 +75,6 @@ const allProducts = [
         description: 'Extra-large shuttle version designed to operate between metro and markets.',
     },
     {
-        name: 'Evyan Van-Type Rickshaw',
-        image: '../../img/15.png',
-        description: 'Fully enclosed van-shaped electric rickshaw for secured cargo transport.',
-    },
-    {
         name: 'Evyan Ambulance E-Rickshaw',
         image: '../../img/16.png',
         description: 'Emergency-response rickshaw with stretcher space and medical compartment.',
