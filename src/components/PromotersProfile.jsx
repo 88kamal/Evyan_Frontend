@@ -6,13 +6,25 @@ const promoters = [
     name: "Mr. Praveen Kumar",
     title: "Director",
     description:
-      "Mr. Praveen Kumar is a visionary entrepreneur and NRI business leader with a strong presence across Russia, the UAE, the UK, and other global markets. His international expertise and strategic foresight have fueled our global growth, innovation, and market expansion.",
+      `We have Mr. Praveen Kumar as one of our Direc
+tors, a NRI Business Person with a  business 
+presence in Russia, The UAE and The UK, etc. His 
+strategic thinking, innovative approaches,  experi
+ence and expertise has made him to tap into the 
+diverse markets, attract more clients, and create 
+huge opportunities for expansion and innovation.`,
   },
   {
     name: "Mr. Pranav Bhardwaj",
     title: "Director",
-    description:
-      "Mr. Pranav Bhardwaj brings rich experience from India’s manufacturing sector. With his sharp operational skills and leadership, we maintain high product quality, seamless execution, and continual process improvement across all business verticals.",
+    description: `Secondly, we have Mr. Pranav Bhardwaj as the 
+other director, having diverse manufacturing 
+experience in the bustling industry of India. With 
+Mr. Bhardwaj leadership and strategic vision at 
+the forefront, our operations will run smoothly 
+and efficiently, delivering high-quality products to 
+our valued customers.
+`
   },
 ];
 

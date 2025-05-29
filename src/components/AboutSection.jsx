@@ -15,7 +15,7 @@ const AboutSection = () => {
           className="space-y-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            About <span className="text-blue-600">Evyan</span>
+            About <span className="text-[#00a7da]">Evyan</span>
           </h2>
           <p className="text-gray-700 text-lg">
             At Evyan, we’re on a mission to electrify urban mobility. Our focus lies in building reliable, sustainable, and affordable electric vehicles designed to reshape the future of transportation in India.
@@ -40,7 +40,7 @@ const AboutSection = () => {
   className="w-full flex justify-center"
 >
   <img
-    src="../../img/5.png" // Replace with your actual image path
+    src="../../images/2.png" // Replace with your actual image path
     alt="Electric Auto Evyan"
     className="max-w-md w-full object-contain rounded-lg shadow-lg"
   />

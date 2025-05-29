@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-[#cffafe] px-6 py-12">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fdeaeb] to-[#68ceec] px-6 py-12">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-10 items-center">
 
         {/* IMAGE FIRST ON MOBILE */}
@@ -36,7 +36,7 @@ const HeroSection = () => {
           >
             Upgrade to a Smarter Ride with
             <br />
-            <span className="text-blue-600">Electric Auto Rickshaws</span>
+            <span className="text-[#00a7da]">Electric Auto Rickshaws</span>
           </motion.h1>
 
           <motion.p
@@ -66,11 +66,11 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition">
+            <button className="bg-[#00a7da] text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition">
               Get a Quote
             </button>
             <Link to={'/all-products'}>
-             <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-md text-lg hover:bg-blue-600 hover:text-white transition">
+             <button className="border border-[#00a7da] text-[#00a7da] px-6 py-3 rounded-md text-lg hover:bg-[#00a7da] hover:text-white transition">
               Explore Models
             </button>
             </Link>

@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 const products = [
   {
     name: 'Evyan Passenger E-Rickshaw',
-    image: '../../img/1.png',
+    image: '../../images/1.png',
     description: 'Designed for comfortable city commuting with high range and low maintenance.',
   },
   {
     name: 'Evyan Cargo E-Rickshaw',
-    image: '../../img/2.png',
+    image: '../../images/2.png',
     description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
   },
   {
     name: 'Evyan School E-Rickshaw',
-    image: '../../img/3.png',
+    image: '../../images/3.png',
     description: 'Safe and eco-friendly transportation option for school routes and institutions.',
   },
 ];
@@ -73,8 +73,16 @@ const ProductRangeSection = () => {
               {/* Book Now Button */}
               <div className="px-6 pb-6">
                 <a href="tel:+918888888888">
-                  <Button fullWidth className="bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold">
+                  <Button fullWidth className="bg-[#00a7da] hover:bg-blue-700 text-white text-base font-semibold">
                     Book Now
+                  </Button>
+                </a>
+              </div>
+
+              <div className="px-6 pb-6">
+                <a  href="../images/Brochure.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button fullWidth className="bg-red-600 hover:bg-red-700 text-white text-base font-semibold">
+                    Download Brochure
                   </Button>
                 </a>
               </div>
