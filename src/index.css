@@ -5,3 +5,273 @@
 body {
     font-family: Tahoma;
 }
+
+/* src/components/VehicleShowcase.css */
+.vehicle-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.showcase-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.showcase-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.tabs button:hover:not(.active) {
+  background-color: #d6dbdf;
+}
+
+/* Featured section */
+.featured-section {
+  margin-bottom: 3rem;
+}
+
+.highlight-card {
+  display: flex;
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.highlight-content {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.highlight-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.spec-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.spec-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.spec-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.spec-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.highlight-description {
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
+  opacity: 0.95;
+}
+
+.cta-button {
+  align-self: flex-start;
+  padding: 0.8rem 2rem;
+  background-color: white;
+  color: #3498db;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Vehicle grid */
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.vehicle-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vehicle-placeholder {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.l5m { background-color: #3498db; }
+.l5n-closed { background-color: #e74c3c; }
+.l5n-open { background-color: #f39c12; }
+.evyan-normal { background-color: #2ecc71; }
+.evyan-loadkro-open { background-color: #9b59b6; }
+
+.vehicle-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  margin: 0 0 1.2rem;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.spec-summary {
+  margin-bottom: 1.5rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 0.95rem;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-item span:first-child {
+  color: #7f8c8d;
+}
+
+.details-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .highlight-card {
+    flex-direction: column;
+  }
+  
+  .highlight-image {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tabs button {
+    width: 80%;
+  }
+  
+  .spec-highlights {
+    grid-template-columns: 1fr;
+  }
+}
