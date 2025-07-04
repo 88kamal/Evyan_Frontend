@@ -6,47 +6,47 @@ import Layout from '../components/layout/Layout';
 const allProducts = [
     {
         name: 'Evyan Passenger E-Rickshaw',
-        image: '../../img/1.png',
+        image: '../../images/1.png',
         description: 'Designed for comfortable city commuting with high range and low maintenance.',
     },
     {
         name: 'Evyan Cargo E-Rickshaw',
-        image: '../../img/2.png',
+        image: '../../images/2.png',
         description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
     },
     {
         name: 'Evyan School E-Rickshaw',
-        image: '../../img/3.png',
+        image: '../../images/3.png',
         description: 'Safe and eco-friendly transportation option for school routes and institutions.',
     },
     {
         name: 'Evyan Premium Passenger Model',
-        image: '../../img/4.png',
+        image: '../../images/4.png',
         description: 'Premium model with extended battery life and superior seating comfort for urban travel.',
     },
     {
         name: 'Evyan Heavy-Duty Cargo Carrier',
-        image: '../../img/5.png',
+        image: '../../images/5.png',
         description: 'Engineered for rugged cargo operations with reinforced chassis and extended load capacity.',
     },
     {
         name: 'Evyan Smart School Van',
-        image: '../../img/6.png',
+        image: '../../images/6.png',
         description: 'Smart vehicle with GPS and safety features for student transportation.',
     },
     {
         name: 'Evyan Metro Shuttle',
-        image: '../../img/7.png',
+        image: '../../images/7.png',
         description: 'Last-mile electric shuttle for metro stations and high footfall areas.',
     },
     {
         name: 'Evyan Solar Hybrid Rickshaw',
-        image: '../../img/8.png',
+        image: '../../images/8.png',
         description: 'Eco-friendly model with solar charging panel integration.',
     },
     {
         name: 'Evyan Cold Storage Carrier',
-        image: '../../img/9.png',
+        image: '../../images/9.png',
         description: 'Special cargo rickshaw designed to transport temperature-sensitive goods.',
     },
     {
@@ -131,6 +131,12 @@ const AllProducts = () => {
                                             Book Now
                                         </Button>
                                     </a>
+
+                                                    <a  href="../images/Brochure.pdf" target="_blank" rel="noopener noreferrer">
+                                                      <Button fullWidth className="bg-red-600 hover:bg-red-700 text-white text-base font-semibold mt-5">
+                                                        Download Brochure
+                                                      </Button>
+                                                    </a>
                                 </CardBody>
                             </Card>
                         </motion.div>
