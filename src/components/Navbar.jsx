@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     Navbar,
     Typography,
@@ -7,10 +7,16 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import ShareModal from "./ShareModal";
-import { PhoneCall } from "lucide-react";
+import AuthModal from "./AuthModal";
+import myContext from "../context/myContext";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Navbars() {
     const [openNav, setOpenNav] = React.useState(false);
+    const { user } = useContext(myContext);
+
+
+
 
     React.useEffect(() => {
         const handleResize = () => {
@@ -26,12 +32,18 @@ export default function Navbars() {
         { to: '/', label: 'Home' },
         { to: '/about', label: 'About' },
         { to: '/contact', label: 'Contact' },
+        { label: "Blogs", to: "/blogs" },
         { to: '/services', label: 'Services' },
     ];
 
+    const rolePaths = {
+        1: '/admin-dashboard/admin-home-page',
+        2: '/user-profile',
+    };
+
     return (
         <div className="sticky inset-0 z-50 w-full bg-blue-50">
-            <Navbar className="w-full max-w-none shadow-md py-2 px-4 lg:px-5 lg:py-2.5 rounded-none">
+            <Navbar className="w-full max-w-none shadow-md py-2 px-4 lg:px-5 lg:py-2.5 rounded-none relative">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     {/* Logo */}
                     <Link to={'/'}>
@@ -53,57 +65,69 @@ export default function Navbars() {
                         </ul>
                     </div>
 
-                    {/* Right Buttons */}
+                    {/* Right Buttons - Desktop */}
                     <div className="hidden lg:flex items-center gap-4">
                         <ShareModal />
-                        <a
-                            href="tel:+911234567890"
-                            className="flex items-center gap-2 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-sm rounded-md transition"
-                        >
-                            <PhoneCall className="w-4 h-4" />
-                            Call Now
-                        </a>
+                        {rolePaths[user?.role] ? (
+                            <Link to={rolePaths[user.role]}>
+                                <FaUserCircle className="w-7 h-7 text-gray-800" />
+                            </Link>
+                        ) : (
+                            <AuthModal />
+                        )}
                     </div>
 
-                    {/* Mobile Menu Toggle */}
-                    <IconButton
-                        className="ml-auto h-10 w-10 text-inherit rounded-lg border-blue-400 lg:hidden bg-white border shadow-none hover:shadow-none"
-                        ripple={false}
-                        onClick={() => setOpenNav(!openNav)}
-                    >
-                        {openNav ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        )}
-                    </IconButton>
+                    {/* Mobile Menu Toggle and Buttons */}
+                    <div className="flex lg:hidden items-center gap-2">
+                        <div className="flex items-center gap-2">
+                            <div className="relative">
+                                <ShareModal />
+                            </div>
+                            <div className="relative">
+                                {rolePaths[user?.role] ? (
+                                    <Link to={rolePaths[user.role]}>
+                                        <FaUserCircle className="w-7 h-7 text-gray-800" />
+                                    </Link>
+                                ) : (
+                                    <AuthModal />
+                                )}
+                            </div>
+                        </div>
+                        <IconButton
+                            className="h-10 w-10 text-inherit rounded-lg border-blue-400 bg-white border shadow-none hover:shadow-none"
+                            ripple={false}
+                            onClick={() => setOpenNav(!openNav)}
+                        >
+                            {openNav ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            )}
+                        </IconButton>
+                    </div>
                 </div>
 
                 {/* Mobile Nav Links */}
                 <Collapse open={openNav}>
-                    <ul className="flex flex-col gap-2 py-2">
-                        {navLinks.map((item, index) => (
-                            <li key={index}>
-                                <Link to={item.to} className="block py-1 px-2 text-md app-font text-black hover:text-blue-600">
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ))}
-                        <li className="flex flex-col gap-2 px-2 pt-2">
-                            <ShareModal />
-                            <a
-                                href="tel:+911234567890"
-                                className="flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-md transition"
-                            >
-                                <PhoneCall className="w-4 h-4" />
-                                Call Now
-                            </a>
-                        </li>
-                    </ul>
+                    <div className="container mx-auto">
+                        <ul className="flex flex-col gap-2 py-2">
+                            {navLinks.map((item, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={item.to}
+                                        className="block py-2 px-2 text-md app-font text-black hover:text-blue-600"
+                                        onClick={() => setOpenNav(false)}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </Collapse>
             </Navbar>
         </div>
