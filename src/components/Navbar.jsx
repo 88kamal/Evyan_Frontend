@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
     Navbar,
     Typography,
@@ -9,14 +9,12 @@ import { Link } from "react-router-dom";
 import ShareModal from "./ShareModal";
 import AuthModal from "./AuthModal";
 import myContext from "../context/myContext";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaChevronDown } from "react-icons/fa";
 
 export default function Navbars() {
     const [openNav, setOpenNav] = React.useState(false);
+    const [productsOpen, setProductsOpen] = useState(false);
     const { user } = useContext(myContext);
-
-
-
 
     React.useEffect(() => {
         const handleResize = () => {
@@ -34,12 +32,20 @@ export default function Navbars() {
         { to: '/contact', label: 'Contact' },
         { label: "Blogs", to: "/blogs" },
         { to: '/services', label: 'Services' },
+        { to: '/presence', label: 'Presence' },
     ];
 
     const rolePaths = {
         1: '/admin-dashboard/admin-home-page',
         2: '/user-profile',
     };
+
+    // Product types for dropdown
+    const productTypes = [
+        { type: 'L2', label: 'L2 Vehicles' },
+        { type: 'L3', label: 'L3 Vehicles' },
+        { type: 'L5', label: 'L5 Vehicles' },
+    ];
 
     return (
         <div className="sticky inset-0 z-50 w-full bg-blue-50">
@@ -62,6 +68,34 @@ export default function Navbars() {
                                     </Link>
                                 </li>
                             ))}
+                            
+                            {/* Products Dropdown */}
+                            <li className="relative group">
+                                <button 
+                                    className="text-md font-medium app-font hover:text-blue-600 flex items-center gap-1"
+                                    onClick={() => setProductsOpen(!productsOpen)}
+                                >
+                                    Products
+                                    <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                <div 
+                                    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ${
+                                        productsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                                    }`}
+                                >
+                                    {productTypes.map((item) => (
+                                        <Link 
+                                            key={item.type}
+                                            to={`/products/${item.type}`}
+                                            className="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600"
+                                            onClick={() => setProductsOpen(false)}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
@@ -126,6 +160,38 @@ export default function Navbars() {
                                     </Link>
                                 </li>
                             ))}
+                            
+                            {/* Mobile Products Dropdown */}
+                            <li>
+                                <button 
+                                    className="flex items-center justify-between w-full py-2 px-2 text-md app-font text-black"
+                                    onClick={() => setProductsOpen(!productsOpen)}
+                                >
+                                    Products
+                                    <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                <div className={`overflow-hidden transition-all duration-300 ${
+                                    productsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                                }`}>
+                                    <ul className="pl-6">
+                                        {productTypes.map((item) => (
+                                            <li key={item.type}>
+                                                <Link
+                                                    to={`/products/${item.type}`}
+                                                    className="block py-2 px-2 text-md app-font text-gray-600 hover:text-blue-600"
+                                                    onClick={() => {
+                                                        setProductsOpen(false);
+                                                        setOpenNav(false);
+                                                    }}
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </Collapse>

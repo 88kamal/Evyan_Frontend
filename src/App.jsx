@@ -21,11 +21,17 @@ import AdminAddBlogs from "./pages/adminDashboard/pages/AdminAddBlogs";
 import AdminViewUserAndAdministration from "./pages/adminDashboard/pages/AdminViewUserAndAdministration";
 import BlogBySlug from "./components/blog/BlogBySlug";
 import Blog from "./pages/Blog";
+import Enquiry from "./components/Enquiry";
+import ProductsPage from "./pages/ProductPage";
+import Whatsapp from "./components/common/Whatsapp";
+import EvyanPresence from "./pages/EvyanPresence";
 
 function App() {
   return (
     <MyState>
       <Router>
+        <Whatsapp/>
+        <Enquiry/>
         <ScrollTop />
         <Toaster position="top-center" />
         <Routes>
@@ -36,8 +42,11 @@ function App() {
           <Route path="/all-products" element={<AllProductsPage />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/presence" element={<EvyanPresence />} />
           <Route path="/blog/:slug" element={<BlogBySlug />} />
           <Route path="/*" element={<NoPage />} />
+      
+<Route path="/products/:type" element={<ProductsPage />} />
 
           <>
             <Route
