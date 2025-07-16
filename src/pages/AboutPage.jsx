@@ -5,13 +5,13 @@ import Layout from '../components/layout/Layout';
 const AboutPage = () => {
   return (
     <Layout>
-      <main className="bg-gradient-to-b from-blue-50 via-white to-cyan-50 min-h-screen">
+      <main className="bg-gradient-to-b from-blue-50 via-white to-cyan-50 min-h-[30vh] sm:min-h-screen">
         {/* Hero Title with Image */}
         <section className="relative px-4 sm:px-6 py-20 md:px-10 lg:px-24 text-center">
           <img
             src={'../../about.png'}
             alt="Evyan About Banner"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
+            className="absolute inset-0 w-full min-h-[30vh] sm:min-h-screen object-cover opacity-20"
           />
           <motion.div
             initial={{ opacity: 0, y: 40 }}

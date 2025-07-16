@@ -52,7 +52,7 @@ const Enquiry = () => {
     e.preventDefault();
     const message = `Hello, I would like to enquire about the following product:\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nState: ${formData.state?.label}\nCity: ${formData.city?.label}\nProduct: ${formData.product?.label}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+918791587023&text=${encodedMessage}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+918292417430&text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
     setIsOpen(false);
     setFormData({

@@ -13,7 +13,7 @@ const HomePage = () => {
     <Layout>
       <HeroSection />
       <AboutSection />
-      <VehicleShowcase />
+      {/* <VehicleShowcase /> */}
       <ProductRangeSection />
       <FaqSection />
       <PromotersProfile />

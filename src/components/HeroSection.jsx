@@ -12,50 +12,46 @@ const HeroSection = () => {
     (_, i) => `/banner/banner-${i + 1}.jpg`
   );
 
-  // Change background image every 5 seconds
+  // Auto image change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % totalImages);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [totalImages]);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-12 overflow-hidden">
-      {/* Background image slider */}
+    <section className="relative w-full min-h-[30vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false}>
-          <motion.div
+          <motion.img
             key={currentIndex}
+            src={imagePaths[currentIndex]}
+            alt="Hero"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${imagePaths[currentIndex]})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </AnimatePresence>
 
-        {/* Gradient overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/60 via-[#2c2c2c]/70 to-[#0f2027]/50 z-[1]" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/60 via-[#2c2c2c]/70 to-[#0f2027]/50 z-10" />
       </div>
 
-      {/* Content */}
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      {/* Hero content */}
+      <div className="relative z-20 max-w-7xl w-full px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center py-8 sm:py-16">
         {/* Text content */}
         <motion.div
+          className="text-center lg:text-left space-y-5"
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 text-center lg:text-left"
         >
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -66,7 +62,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.p
-            className="text-base sm:text-lg text-white"
+            className="text-sm sm:text-base text-white max-w-xl mx-auto lg:mx-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -74,8 +70,9 @@ const HeroSection = () => {
             Say goodbye to rising fuel costs and high maintenance. Our e-rickshaws are built for city efficiency and long-lasting performance.
           </motion.p>
 
+          {/* List hidden on small screens */}
           <motion.ul
-            className="text-white space-y-2 list-disc pl-5 text-left inline-block lg:inline lg:pl-5"
+            className="hidden sm:block text-white space-y-2 list-disc pl-6 text-left"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -86,24 +83,25 @@ const HeroSection = () => {
             <li>Government subsidies available</li>
           </motion.ul>
 
+          {/* CTA Buttons */}
           <motion.div
             className="flex justify-center lg:justify-start gap-4 flex-wrap pt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <button className="bg-[#00a7da] text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition">
+            <button className="bg-[#00a7da] text-white px-5 py-2 text-sm sm:text-base rounded-md hover:bg-blue-700 transition">
               Get a Quote
             </button>
             <Link to="/all-products">
-              <button className="border border-white text-white px-6 py-3 rounded-md text-lg hover:bg-[#00a7da] hover:text-white transition">
+              <button className="border border-white text-white px-5 py-2 text-sm sm:text-base rounded-md hover:bg-[#00a7da] hover:text-white transition">
                 Explore Models
               </button>
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Placeholder column for layout balance */}
+        {/* Layout balance column */}
         <div className="hidden lg:block" />
       </div>
     </section>

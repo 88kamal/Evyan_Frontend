@@ -14,7 +14,7 @@ const SimpleSlider = () => {
  
 
   return (
-    <div className="relative w-full overflow-hidden h-[500px]">
+    <div className="relative w-full overflow-hidden min-h-[30vh] sm:min-h-screen">
       {/* Slide Container */}
       <div 
         className="flex transition-transform duration-500 ease-in-out"
@@ -25,7 +25,7 @@ const SimpleSlider = () => {
             <img 
               src={'../../hero.png'} 
               alt={`Banner ${index + 1}`} 
-              className="w-full h-[500px] object-cover"
+              className="w-full min-h-[30vh] sm:min-h-screen object-cover"
             />
           </div>
         ))}
