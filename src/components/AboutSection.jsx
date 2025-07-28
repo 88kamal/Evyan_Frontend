@@ -4,7 +4,7 @@ import SimpleSlider from './BannerSlider';
 
 const AboutSection = () => {
   return (
-    <section className="relative  bg-gradient-to-br from-[#f0fcff] via-[#f0f9ff] to-[#e6f7ff] py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative  bg-gradient-to-br from-[#f0fcff] via-[#f0f9ff] to-[#e6f7ff] py-5 lg:py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#00a7da]/10 rounded-full blur-3xl"></div>
