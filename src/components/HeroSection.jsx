@@ -46,9 +46,10 @@ const desktopBanners = [
   "/banner/banner-3.jpg",
 ];
 const mobileBanners = [
-  "../../../new/1.jpg", "../../../new/2.jpg", "../../../new/3.jpg", "../../../new/4.jpg", "../../../new/5.jpg",
-  "../../../new/6.jpg", "../../../new/7.jpg", "../../../new/8.jpg", "../../../new/9.jpg", "../../../new/10.jpg",
-  "../../../new/11.jpg", "../../../new/12.jpg"
+  "../../../new/1.jpg", "../../../new/2.jpg", 
+  // "../../../new/3.jpg", "../../../new/4.jpg", "../../../new/5.jpg",
+  // "../../../new/6.jpg", "../../../new/7.jpg", "../../../new/8.jpg", "../../../new/9.jpg", "../../../new/10.jpg",
+  // "../../../new/11.jpg", "../../../new/12.jpg"
 ];
 
 const HeroSection = () => {
