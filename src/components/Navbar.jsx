@@ -33,7 +33,7 @@ export default function Navbars() {
         } else {
             document.body.style.overflow = 'auto';
         }
-        
+
         return () => {
             document.body.style.overflow = 'auto';
         };
@@ -80,24 +80,23 @@ export default function Navbars() {
                                     </Link>
                                 </li>
                             ))}
-                            
+
                             {/* Products Dropdown */}
                             <li className="relative group">
-                                <button 
+                                <button
                                     className="text-md font-medium app-font hover:text-blue-600 flex items-center gap-1"
                                     onClick={() => setProductsOpen(!productsOpen)}
                                 >
                                     Products
                                     <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
                                 </button>
-                                
-                                <div 
-                                    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ${
-                                        productsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                                    }`}
+
+                                <div
+                                    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ${productsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                                        }`}
                                 >
                                     {productTypes.map((item) => (
-                                        <Link 
+                                        <Link
                                             key={item.type}
                                             to={`/products/${item.type}`}
                                             className="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600"
@@ -161,18 +160,16 @@ export default function Navbars() {
             {/* Mobile Nav Drawer - Slides from right */}
             <div className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${openNav ? 'visible' : 'invisible'}`}>
                 {/* Overlay */}
-                <div 
-                    className={`fixed inset-0 bg-black transition-opacity duration-300 ${
-                        openNav ? 'opacity-50' : 'opacity-0'
-                    }`}
+                <div
+                    className={`fixed inset-0 bg-black transition-opacity duration-300 ${openNav ? 'opacity-50' : 'opacity-0'
+                        }`}
                     onClick={() => setOpenNav(false)}
                 />
-                
+
                 {/* Drawer Container */}
-                <div 
-                    className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ${
-                        openNav ? 'translate-x-0' : 'translate-x-full'
-                    }`}
+                <div
+                    className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ${openNav ? 'translate-x-0' : 'translate-x-full'
+                        }`}
                 >
                     <div className="flex flex-col h-full">
                         {/* Drawer Header */}
@@ -187,7 +184,7 @@ export default function Navbars() {
                                 </svg>
                             </IconButton>
                         </div>
-                        
+
                         {/* Drawer Body */}
                         <div className="flex-1 overflow-y-auto p-4">
                             <ul className="flex flex-col gap-4">
@@ -202,20 +199,19 @@ export default function Navbars() {
                                         </Link>
                                     </li>
                                 ))}
-                                
+
                                 {/* Mobile Products Dropdown */}
                                 <li className="border-t border-gray-200 pt-2">
-                                    <button 
+                                    <button
                                         className="flex items-center justify-between w-full py-3 px-4 text-lg app-font text-black hover:bg-blue-50 rounded-lg"
                                         onClick={() => setProductsOpen(!productsOpen)}
                                     >
                                         <span>Products</span>
                                         <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
                                     </button>
-                                    
-                                    <div className={`overflow-hidden transition-all duration-300 ${
-                                        productsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                                    }`}>
+
+                                    <div className={`overflow-hidden transition-all duration-300 ${productsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                                        }`}>
                                         <ul className="pl-6 py-1">
                                             {productTypes.map((item) => (
                                                 <li key={item.type}>
