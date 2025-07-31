@@ -46,10 +46,9 @@ const desktopBanners = [
   "/banner/banner-3.jpg",
 ];
 const mobileBanners = [
-  "../../../new/1.jpg", "../../../new/2.jpg", 
-  // "../../../new/3.jpg", "../../../new/4.jpg", "../../../new/5.jpg",
-  // "../../../new/6.jpg", "../../../new/7.jpg", "../../../new/8.jpg", "../../../new/9.jpg", "../../../new/10.jpg",
-  // "../../../new/11.jpg", "../../../new/12.jpg"
+  "../../../new/1.jpg", 
+  "../../../new/2.jpg", 
+  // ... other mobile images
 ];
 
 const HeroSection = () => {
@@ -90,23 +89,21 @@ const HeroSection = () => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={currentIndex + (isMobile ? '-mobile' : '-desktop')}
           className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.7 }}
         >
-          {/* Yahi important: object-cover only, koi black nahi aayega */}
           <img
             src={bannerImages[currentIndex]}
             alt={currentModel?.name || ''}
             className="w-full h-full object-cover object-center select-none pointer-events-none"
             draggable={false}
           />
-          {/* Overlay code below (unchanged)... */}
           <div className="
             absolute inset-0
             bg-gradient-to-b from-black/40 via-black/40 to-black/40
@@ -116,23 +113,26 @@ const HeroSection = () => {
           ">
             <div className="w-full mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 flex flex-col h-full sm:justify-center justify-end pb-24 sm:pb-0 pt-8 sm:pt-0">
               <div className="sm:grid sm:grid-cols-2 sm:gap-8 flex flex-col items-center sm:items-start text-center sm:text-left sm:h-auto h-full">
+                {/* Empty column for left side on desktop */}
+                <div className="hidden sm:block"></div>
+                
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`text-${currentIndex}`}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 3 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.7 }}
+                    exit={{ opacity: 0, y: 2 }}
+                    transition={{ duration: 0.2 }}
                     className={`
                       text-white w-full flex flex-col
                       ${isMobile
                         ? "items-start justify-end text-left px-6 pb-24 pt-0"
-                        : "items-center sm:items-start sm:justify-center justify-end sm:mb-0 mb-8 text-center sm:text-left"}
+                        : "items-end justify-center sm:text-right text-center"}
                       transition-all duration-300
                     `}
-                    style={isMobile ? { maxWidth: "90vw", position: 'relative' } : {}}
+                    style={isMobile ? { maxWidth: "90vw", position: 'relative' } : { maxWidth: "90%" }}
                   >
-                    <div className="mb-2 flex items-center justify-start">
+                    <div className="mb-2 flex items-center justify-start sm:justify-end">
                       <div className="w-2.5 h-2.5 rounded-full bg-[#00a7da] mr-2"></div>
                       <span className="text-xs sm:text-base font-medium tracking-wide">
                         {currentModel?.subtitle}
@@ -147,11 +147,9 @@ const HeroSection = () => {
                     </p>
                   </motion.div>
                 </AnimatePresence>
-                <div className="hidden sm:block"></div>
               </div>
             </div>
           </div>
-          {/* Dots, Arrows, Blurs -- original code unchanged */}
           <div className="absolute left-0 right-0 bottom-20 sm:bottom-12 flex justify-center z-20">
             <div className="flex gap-1 sm:gap-2">
               {bannerImages.map((_, idx) => (
@@ -189,16 +187,15 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Blurs (unchanged) */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-36 h-36 sm:w-64 sm:h-64 rounded-full bg-[#00a7da] opacity-10 blur-3xl"
         animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 7, repeat: Infinity }}
+        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.div
         className="absolute bottom-1/3 right-1/4 w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-[#00a7da] opacity-10 blur-3xl"
         animate={{ scale: [1, 1.25, 1] }}
-        transition={{ duration: 8, repeat: Infinity, delay: 0.7 }}
+        transition={{ duration: 4, repeat: Infinity, delay: 0.7 }}
       />
     </div>
   );

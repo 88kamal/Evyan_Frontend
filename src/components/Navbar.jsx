@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {
     Navbar,
     Typography,
     IconButton,
-    Collapse,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import ShareModal from "./ShareModal";
@@ -16,7 +15,8 @@ export default function Navbars() {
     const [productsOpen, setProductsOpen] = useState(false);
     const { user } = useContext(myContext);
 
-    React.useEffect(() => {
+    // Close mobile menu on resize
+    useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 960) {
                 setOpenNav(false);
@@ -25,6 +25,19 @@ export default function Navbars() {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    // Prevent body scrolling when mobile menu is open
+    useEffect(() => {
+        if (openNav) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [openNav]);
 
     const navLinks = [
         { to: '/', label: 'Home' },
@@ -40,7 +53,6 @@ export default function Navbars() {
         2: '/user-profile',
     };
 
-    // Product types for dropdown
     const productTypes = [
         { type: 'L2', label: 'L2 Vehicles' },
         { type: 'L3', label: 'L3 Vehicles' },
@@ -144,58 +156,89 @@ export default function Navbars() {
                         </IconButton>
                     </div>
                 </div>
-
-                {/* Mobile Nav Links */}
-                <Collapse open={openNav}>
-                    <div className="container mx-auto">
-                        <ul className="flex flex-col gap-2 py-2">
-                            {navLinks.map((item, index) => (
-                                <li key={index}>
-                                    <Link
-                                        to={item.to}
-                                        className="block py-2 px-2 text-md app-font text-black hover:text-blue-600"
-                                        onClick={() => setOpenNav(false)}
-                                    >
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                            
-                            {/* Mobile Products Dropdown */}
-                            <li>
-                                <button 
-                                    className="flex items-center justify-between w-full py-2 px-2 text-md app-font text-black"
-                                    onClick={() => setProductsOpen(!productsOpen)}
-                                >
-                                    Products
-                                    <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
-                                </button>
-                                
-                                <div className={`overflow-hidden transition-all duration-300 ${
-                                    productsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                                }`}>
-                                    <ul className="pl-6">
-                                        {productTypes.map((item) => (
-                                            <li key={item.type}>
-                                                <Link
-                                                    to={`/products/${item.type}`}
-                                                    className="block py-2 px-2 text-md app-font text-gray-600 hover:text-blue-600"
-                                                    onClick={() => {
-                                                        setProductsOpen(false);
-                                                        setOpenNav(false);
-                                                    }}
-                                                >
-                                                    {item.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </Collapse>
             </Navbar>
+
+            {/* Mobile Nav Drawer - Slides from right */}
+            <div className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${openNav ? 'visible' : 'invisible'}`}>
+                {/* Overlay */}
+                <div 
+                    className={`fixed inset-0 bg-black transition-opacity duration-300 ${
+                        openNav ? 'opacity-50' : 'opacity-0'
+                    }`}
+                    onClick={() => setOpenNav(false)}
+                />
+                
+                {/* Drawer Container */}
+                <div 
+                    className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ${
+                        openNav ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+                >
+                    <div className="flex flex-col h-full">
+                        {/* Drawer Header */}
+                        <div className="flex justify-end p-4">
+                            <IconButton
+                                className="h-10 w-10 text-inherit rounded-lg border-blue-400 bg-white border shadow-none hover:shadow-none"
+                                ripple={false}
+                                onClick={() => setOpenNav(false)}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </IconButton>
+                        </div>
+                        
+                        {/* Drawer Body */}
+                        <div className="flex-1 overflow-y-auto p-4">
+                            <ul className="flex flex-col gap-4">
+                                {navLinks.map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            to={item.to}
+                                            className="block py-3 px-4 text-lg app-font text-black hover:bg-blue-50 rounded-lg"
+                                            onClick={() => setOpenNav(false)}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                                
+                                {/* Mobile Products Dropdown */}
+                                <li className="border-t border-gray-200 pt-2">
+                                    <button 
+                                        className="flex items-center justify-between w-full py-3 px-4 text-lg app-font text-black hover:bg-blue-50 rounded-lg"
+                                        onClick={() => setProductsOpen(!productsOpen)}
+                                    >
+                                        <span>Products</span>
+                                        <FaChevronDown className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+                                    
+                                    <div className={`overflow-hidden transition-all duration-300 ${
+                                        productsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                                    }`}>
+                                        <ul className="pl-6 py-1">
+                                            {productTypes.map((item) => (
+                                                <li key={item.type}>
+                                                    <Link
+                                                        to={`/products/${item.type}`}
+                                                        className="block py-3 px-4 text-md app-font text-gray-600 hover:bg-blue-50 rounded-lg"
+                                                        onClick={() => {
+                                                            setProductsOpen(false);
+                                                            setOpenNav(false);
+                                                        }}
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
