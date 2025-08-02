@@ -101,6 +101,20 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       }
     ],
+    "EVYAN JANTA": [
+      {
+        "Model Name": "EVYAN JANTA",
+        "Motor": "BLDC 1KW",
+        "Controller": "24 T BLDC Indian",
+        "Battery": "LOCAL",
+        "Differential": "1:10 GR Indian",
+        "Charger": "15 Ah Indian Make",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Powder coated paint, Stepney Cover, Body Light, led fog light, FM etc",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    ],
     "EVYAN LOADKRO": [
       {
         "Model Name": "EVYAN LOADKRO (OPEN)",
@@ -132,6 +146,22 @@ const vehicleData = {
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Loading Capacity": "600 Kg (Rated load)"
+      },
+      {
+        "Model Name": "EVYAN LOADKRO LI",
+        "Chassis": "Double Girder CRC MS Loader",
+        "Paint": "CED Coated",
+        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
+        "Controller": "24 T PMSM Indian",
+        "Battery": "51.2V 105AH  LITHIUM-ION",
+        "Differential": "1:10 GR Indian",
+        "Charger": "20 Ah Indian Make",
+        "Converter": "Super Quality",
+        "Tyre": "3.75*12 in CEAT/RALCO",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Stepney Cover, Led lights, Floor Mat, Wiper, FM etc",
         "Loading Capacity": "600 Kg (Rated load)"
       }
     ],
@@ -296,7 +326,7 @@ const ProductSpecModal = ({ product, onClose }) => {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
-  
+
   const modalVariants = {
     visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 250, damping: 25 } },
     hidden: { opacity: 0, y: 50, scale: 0.9 },
@@ -353,7 +383,7 @@ const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [modalProduct, setModalProduct] = useState(null);
-  
+
   // Map model types to images
   const modelImages = {
     // L3 Models
@@ -365,15 +395,17 @@ const ProductsPage = () => {
     "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
     "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
     "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
+    "EVYAN LOADKRO LI": "/loadkro-li.png",
     "EVYAN GARBAGE (Semi-Hydraulic)": "/garbage-semi.png",
     "EVYAN GARBAGE (Hydraulic)": "/garbage-hydraulic.png",
-    
+    "EVYAN JANTA":"/janta.png",
+
     // L5 Models
     "L5M": "/l5m.png",
     "L5N - CLOSED": "/l5n-closed.png",
     "L5N - OPEN": "/l5n-open.png"
   };
-  
+
   // Map model types to colors
   const modelColors = {
     // L3 Models
@@ -387,13 +419,13 @@ const ProductsPage = () => {
     "EVYAN LOADKRO (CLOSED)": { color: "white" },
     "EVYAN GARBAGE (Semi-Hydraulic)": { color: "from-purple-500 to-violet-500", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)" },
     "EVYAN GARBAGE (Hydraulic)": { color: "from-purple-600 to-violet-600", gradient: "linear-gradient(135deg, #7c3aed, #6d28d9)" },
-    
+
     // L5 Models
     "L5M": { color: "from-red-500 to-orange-500", gradient: "linear-gradient(135deg, #ef4444, #f97316)" },
     "L5N - CLOSED": { color: "white" },
     "L5N - OPEN": { color: "white" }
   };
-  
+
   // Map model types to categories
   const modelCategories = {
     // L3 Models
@@ -407,7 +439,7 @@ const ProductsPage = () => {
     "EVYAN LOADKRO (CLOSED)": "Cargo Vehicle",
     "EVYAN GARBAGE (Semi-Hydraulic)": "Waste Management",
     "EVYAN GARBAGE (Hydraulic)": "Waste Management",
-    
+
     // L5 Models
     "L5M": "Passenger Vehicle",
     "L5N - CLOSED": "Cargo Vehicle",
@@ -420,25 +452,25 @@ const ProductsPage = () => {
       if (vehicleData[type]) {
         // Flatten the data into a single array of products
         const allProducts = [];
-        
+
         Object.entries(vehicleData[type]).forEach(([category, productsInCategory]) => {
           productsInCategory.forEach(product => {
             const modelName = product["Model Name"];
-            
+
             allProducts.push({
               id: `${category}-${modelName}`,
               name: modelName,
               category: modelCategories[modelName] || category,
               specs: product,
               image: modelImages[modelName] || "/default-vehicle.png",
-              ...(modelColors[modelName] || { 
-                color: "from-gray-500 to-gray-700", 
-                gradient: "linear-gradient(135deg, #6b7280, #4b5563)" 
+              ...(modelColors[modelName] || {
+                color: "from-gray-500 to-gray-700",
+                gradient: "linear-gradient(135deg, #6b7280, #4b5563)"
               })
             });
           });
         });
-        
+
         setProducts(allProducts);
       } else {
         setProducts([]);
@@ -455,12 +487,12 @@ const ProductsPage = () => {
     const message = `Hello, I'm interested in your ${productName} vehicle. Could you provide more information?`;
     window.open(`https://api.whatsapp.com/send?phone=+918292417430&text=${encodeURIComponent(message)}`, '_blank');
   };
-  
+
   const ProductCard = ({ product, onViewDetails }) => {
-    const topSpecsToShow = type === 'L3' 
-      ? ['Motor', 'Battery', 'Seating Capacity', 'Loading Capacity', 'Tyre'] 
+    const topSpecsToShow = type === 'L3'
+      ? ['Motor', 'Battery', 'Seating Capacity', 'Loading Capacity', 'Tyre']
       : ['Motor Type', 'Battery type', 'Loading capacity', 'Max. speed', 'Distance per charge'];
-    
+
     const getSummarySpecs = (specs) => {
       return topSpecsToShow.reduce((obj, key) => {
         if (specs[key]) obj[key] = specs[key];
@@ -475,11 +507,11 @@ const ProductsPage = () => {
       >
         <div className="relative">
           <div className="h-56 w-full flex items-center justify-center p-4" style={{ background: product.gradient }}>
-            <motion.img 
-              src={product.image} 
-              alt={product.name} 
-              className="w-full h-full object-contain" 
-              whileHover={{ scale: 1.05 }} 
+            <motion.img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-contain"
+              whileHover={{ scale: 1.05 }}
             />
           </div>
         </div>
@@ -500,14 +532,14 @@ const ProductsPage = () => {
             </ul>
           </div>
           <div className="mt-auto pt-4">
-            <button 
-              onClick={() => onViewDetails(product)} 
+            <button
+              onClick={() => onViewDetails(product)}
               className="text-blue-600 text-sm font-medium hover:underline text-center w-full mt-4"
             >
               View Full Specifications
             </button>
-            <button 
-              onClick={() => handleWhatsAppEnquiry(product.name)} 
+            <button
+              onClick={() => handleWhatsAppEnquiry(product.name)}
               className="mt-4 w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
             >
               <WhatsAppIcon />Enquire on WhatsApp
@@ -521,7 +553,7 @@ const ProductsPage = () => {
   // --- Render Helper Components ---
   const PageHeader = () => (
     <div className="text-center mb-12 md:mb-16">
-      <motion.h1 
+      <motion.h1
         className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -529,13 +561,13 @@ const ProductsPage = () => {
       >
         {`${type} Vehicles`}
       </motion.h1>
-      <motion.div 
+      <motion.div
         className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"
         initial={{ width: 0 }}
         animate={{ width: "6rem" }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       />
-      <motion.p 
+      <motion.p
         className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -545,15 +577,15 @@ const ProductsPage = () => {
       </motion.p>
     </div>
   );
-  
+
   const LoadingSpinner = () => (
     <div className="flex justify-center items-center h-64">
       <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
     </div>
   );
-  
- const ComingSoonDisplay = () => (
-    <motion.div 
+
+  const ComingSoonDisplay = () => (
+    <motion.div
       className="flex justify-center"
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
@@ -569,7 +601,7 @@ const ProductsPage = () => {
         <p className="text-lg text-gray-600 mb-8">
           Product under mother's nest
         </p>
-        <button 
+        <button
           className="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto"
           onClick={() => handleWhatsAppEnquiry("Mother's Nest Product")}
         >
@@ -577,10 +609,10 @@ const ProductsPage = () => {
         </button>
       </div>
     </motion.div>
-);
-  
+  );
+
   const NoProductsFound = () => (
-    <motion.div 
+    <motion.div
       className="text-center py-20"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -594,28 +626,28 @@ const ProductsPage = () => {
       <p className="text-gray-500 mt-2">Please check back later or explore other categories.</p>
     </motion.div>
   );
-  
+
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {type === 'L2' && !isLoading ? <ComingSoonDisplay /> : <PageHeader />}
-          
+
           {isLoading ? (
             <LoadingSpinner />
           ) : (
             (type !== 'L2' && products.length > 0) ? (
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
-                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } }}}
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }}
                 initial="hidden"
                 animate="visible"
               >
                 {products.map(product => (
-                  <ProductCard 
-                    key={product.id} 
-                    product={product} 
-                    onViewDetails={handleViewDetails} 
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onViewDetails={handleViewDetails}
                   />
                 ))}
               </motion.div>
@@ -623,7 +655,7 @@ const ProductsPage = () => {
           )}
         </div>
       </div>
-      
+
       <AnimatePresence>
         {modalProduct && <ProductSpecModal product={modalProduct} onClose={handleCloseModal} />}
       </AnimatePresence>
