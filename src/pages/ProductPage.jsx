@@ -99,6 +99,22 @@ const vehicleData = {
         "Rim": "4*12 In BIS Certified ALLOY",
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
+      },
+      {
+        "Model Name": "EVYAN GOLD li Premium",
+        "Chassis": "Double Girder CRC MS",
+        "Paint": "PT Liquid/ED Coated",
+        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
+        "Controller": "24 T PMSM Indian",
+        "Battery": "135 Ah Eastman/Livguard",
+        "Differential": "1:10 GR Indian",
+        "Charger": "18 Ah Indian Make",
+        "Converter": "Super Quality",
+        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Seating Capacity": "Driver + 4 Passenger"
       }
     ],
     "EVYAN JANTA": [
@@ -393,6 +409,7 @@ const ProductsPage = () => {
     "EVYAN (SS) ALLOY": "/evyan-ss-alloy.png",
     "EVYAN GOLD (Auto Facia) NORMAL": "/gold-normal.png",
     "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
+    "EVYAN GOLD li Premium": "/evyan gold li (premium).jpg",
     "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
     "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
     "EVYAN LOADKRO LI": "/loadkro-li.png",

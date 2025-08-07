@@ -13,32 +13,179 @@ function useIsMobile() {
   return isMobile;
 }
 
-const models = [
-  {
-    name: "EVYAN (SS) ALLOY",
-    subtitle: "Premium Passenger Model",
-    model: "Stainless Steel Edition",
-    features: "Durable & Corrosion-Resistant",
-    tagline: "Aane de",
-    description: "Stainless steel chassis with 4 passenger capacity",
-  },
-  {
-    name: "EVYAN GOLD",
-    subtitle: "Auto Facia Edition",
-    model: "Standard Passenger Model",
-    features: "Comfortable & Efficient",
-    tagline: "Aane de",
-    description: "Economical passenger variant with standard features",
-  },
-  {
-    name: "EVYAN GARBHAUL",
-    subtitle: "Hydraulic Edition",
-    model: "Waste Management Solution",
-    features: "Smart City Solution",
-    tagline: "Clean City Initiative",
-    description: "Waste management vehicle with 600kg capacity",
-  },
-];
+   const models = [
+    // Banner 1: EVYAN (SS) ALLOY
+    {
+      name: "EVYAN (SS) ALLOY",
+      subtitle: "Premium Passenger Model",
+      model: "Stainless Steel Edition",
+      features: "Durable & Corrosion-Resistant",
+      tagline: "Aane de",
+      description: "Stainless steel chassis with 4 passenger capacity",
+      specs: {
+        Chassis: "Double Girder CRC SS",
+        Paint: "PT Liquid/ED Coated",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+    // Banner 2: EVYAN GOLD (Auto Facia) NORMAL
+    {
+      name: "EVYAN GOLD",
+      subtitle: "Auto Facia Edition",
+      model: "Standard Passenger Model",
+      features: "Comfortable & Efficient",
+      tagline: "Aane de",
+      description: "Economical passenger variant with standard features",
+      specs: {
+        Chassis: "Double Girder CRC MS",
+        Paint: "PT Liquid/ED Coated",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+    // Banner 3: EVYAN GARBAGE (Hydraulic)
+    {
+      name: "EVYAN GARBAGE",
+      subtitle: "Hydraulic Edition",
+      model: "Waste Management Solution",
+      features: "Smart City Solution",
+      tagline: "Clean City Initiative",
+      description: "Waste management vehicle with 600kg capacity",
+      specs: {
+        "Box Dimension": "1500×940×1050mm (L×W×H)",
+        "Tipping Method": "Hydraulic (70°)",
+        "Loading Capacity": "600 Kg",
+        Battery: "135 Ah Eastman/Livguard",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        "Tipping Angle": "70° approx"
+      }
+    },
+    // Banner 4: EVYAN (MS) ALLOY
+    {
+      name: "EVYAN MS ALLOY",
+      subtitle: "Mild Steel Edition",
+      model: "Passenger Model",
+      features: "Durable & Efficient",
+      tagline: "Aane de",
+      description: "Mild steel chassis with alloy wheels",
+      specs: {
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        Tyre: "3.75*12 in CEAT/MRF/TVS",
+        Rim: "4*12 In BIS Certified ALLOY",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+    // Banner 5: EVYAN GOLD (Auto Facia) NORMAL
+    {
+      name: "EVYAN GOLD",
+      subtitle: "Auto Facia Normal",
+      model: "Economical Passenger Model",
+      features: "Value for Money",
+      tagline: "Aane de",
+      description: "Affordable passenger variant",
+      specs: {
+        Chassis: "Double Girder CRC MS",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        Tyre: "3.75*12 in CEAT/MRF/TVS",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+
+
+    // Banner 6: EVYAN (MS) NORMAL
+    {
+      name: "EVYAN MS",
+      subtitle: "Standard Edition",
+      model: "Passenger Model",
+      features: "Reliable Performance",
+      tagline: "Aane de",
+      description: "Standard mild steel model for passengers",
+      specs: {
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        Tyre: "3.75*12 in CEAT/MRF/TVS",
+        Rim: "4*12 In BIS Certified",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+    // Banner 7: EVYAN LOADKRO (OPEN)
+    {
+      name: "LOADKRO",
+      subtitle: "Open Loader",
+      model: "Cargo Model",
+      features: "Heavy Duty Performance",
+      tagline: "Har Load, Har Road",
+      description: "Open loader with 600kg capacity",
+      specs: {
+        Chassis: "Double Girder CRC MS Loader 4×6 ft",
+        "Loading Capacity": "600 Kg",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        Tyre: "3.75*12 in CEAT/MRF/TVS"
+      }
+    },
+    // Banner 8: LongRange200
+    {
+      name: "LongRange200",
+      subtitle: "T1250",
+      model: "Euler Storm EV",
+      features: "Har Load, Har Road",
+      tagline: "Long Range Cargo",
+      description: "Cargo model with 125km range & 675kg capacity",
+      specs: {
+        "Motor Type": "BLDC 64V",
+        Battery: "Lithium Ion 60V 200AH",
+        Range: "125 km per charge",
+        "Charging Time": "4 hours",
+        "Loading Capacity": "675 kg",
+        "Max Speed": "43.8 km/h"
+      }
+    },
+    // Banner 9: T1250 Passenger
+    {
+      name: "T1250",
+      subtitle: "Passenger Edition",
+      model: "Euler Storm EV",
+      features: "Comfort Ride, City Ready",
+      tagline: "Aane de",
+      description: "Passenger model with 125km range",
+      specs: {
+        "Motor Type": "BLDC 64V",
+        Battery: "Lithium Ion 60V 200AH",
+        Range: "125 km per charge",
+        "Charging Time": "4 hours",
+        "Seating Capacity": "1 Driver + 3 Passenger",
+        "Max Speed": "43.8 km/h"
+      }
+    },
+     {
+      name: "EVYAN GOLD li",
+      subtitle: "Auto Facia Normal",
+      model: "Economical Passenger Model",
+      features: "Value for Money",
+      tagline: "Aane de",
+      description: "Affordable passenger variant",
+      specs: {
+        Chassis: "Double Girder CRC MS",
+        Motor: "PMSM Indian make (1.97 Kw)",
+        Controller: "24 T PMSM Indian",
+        Battery: "135 Ah Eastman/Livguard",
+        Tyre: "3.75*12 in CEAT/MRF/TVS",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    },
+  ];
 
 const desktopBanners = [
   "/banner/banner-1.jpg",
@@ -50,6 +197,7 @@ const desktopBanners = [
   "/banner/banner-7.jpg",
   "/banner/banner-8.jpg",
   "/banner/banner-9.jpg",
+  "/banner/banner-10.jpg",
 ];
 const mobileBanners = [
   "../../../new/1.jpg", 
@@ -62,9 +210,6 @@ const mobileBanners = [
   "../../../new/8.jpg",
   "../../../new/9.jpg",
   "../../../new/10.jpg",
-  "../../../new/11.jpg",
-  "../../../new/12.jpg",
-
 ];
 
 const HeroSection = () => {
