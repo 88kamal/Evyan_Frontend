@@ -45,7 +45,6 @@ export default function Navbars() {
         { to: '/contact', label: 'Contact' },
         { label: "Blogs", to: "/blogs" },
         { to: '/services', label: 'Services' },
-        { to: '/presence', label: 'Presence' },
     ];
 
     const rolePaths = {

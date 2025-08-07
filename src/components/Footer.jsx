@@ -37,17 +37,27 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm text-blue-100">
-            <li className="flex items-center gap-2">
-              <MapPin size={18} />
-              New Delhi, India
+            <li className="flex items-start gap-2">
+              <MapPin size={18} className="mt-1 flex-shrink-0" />
+              <span>
+                Fact. 1: Plot no. 137, UV Extension, Ecotech II, <br />
+                Greater Noida - 201310, UP, India
+              </span>
             </li>
-            <li className="flex items-center gap-2">
-              <PhoneCall size={18} />
-              <a href="tel:+918888888888" className="hover:text-white">+91 88888 88888</a>
+            <li className="flex items-start gap-2">
+              <PhoneCall size={18} className="mt-1 flex-shrink-0" />
+              <div>
+                <a href="tel:+919311859995" className="block hover:text-white">+91 9311859995</a>
+                <a href="tel:+919311859996" className="block hover:text-white">+91 9311859996</a>
+                <a href="tel:+919311859997" className="block hover:text-white">+91 9311859997</a>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <Mail size={18} />
-              <a href="mailto:info@evyan.com" className="hover:text-white">info@evyan.com</a>
+            <li className="flex items-start gap-2">
+              <Mail size={18} className="mt-1 flex-shrink-0" />
+              <div>
+                <a href="mailto:evyanscm@gmail.com" className="block hover:text-white">evyanscm@gmail.com</a>
+                <a href="mailto:bharatevyan@gmail.com" className="block hover:text-white">bharatevyan@gmail.com</a>
+              </div>
             </li>
           </ul>
         </div>
