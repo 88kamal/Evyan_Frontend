@@ -427,20 +427,27 @@ const ProductsPage = () => {
   const modelColors = {
     // L3 Models
     "EVYAN (MS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN (MS) ALLOY": { color: "from-blue-600 to-indigo-600", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)" },
-    "EVYAN (SS) NORMAL": { color: "from-gray-500 to-gray-700", gradient: "linear-gradient(135deg, #6b7280, #4b5563)" },
-    "EVYAN (SS) ALLOY": { color: "from-gray-600 to-gray-800", gradient: "linear-gradient(135deg, #4b5563, #374151)" },
-    "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-yellow-500 to-amber-500", gradient: "linear-gradient(135deg, #eab308, #f59e0b)" },
-    "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-yellow-600 to-amber-600", gradient: "linear-gradient(135deg, #ca8a04, #d97706)" },
-    "EVYAN LOADKRO (OPEN)": { color: "white" },
-    "EVYAN LOADKRO (CLOSED)": { color: "white" },
-    "EVYAN GARBAGE (Semi-Hydraulic)": { color: "from-purple-500 to-violet-500", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)" },
-    "EVYAN GARBAGE (Hydraulic)": { color: "from-purple-600 to-violet-600", gradient: "linear-gradient(135deg, #7c3aed, #6d28d9)" },
+    "EVYAN (MS) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN (SS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN (SS) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN LOADKRO (OPEN)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN LOADKRO (CLOSED)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GARBAGE (Semi-Hydraulic)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GARBAGE (Hydraulic)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GOLD li Premium": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+
+    "EVYAN JANTA": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN LOADKRO LI": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GOLD li Premium": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+
+
 
     // L5 Models
-    "L5M": { color: "from-red-500 to-orange-500", gradient: "linear-gradient(135deg, #ef4444, #f97316)" },
-    "L5N - CLOSED": { color: "white" },
-    "L5N - OPEN": { color: "white" }
+    "L5M": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "L5N - CLOSED":{ color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "L5N - OPEN": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
   };
 
   // Map model types to categories
