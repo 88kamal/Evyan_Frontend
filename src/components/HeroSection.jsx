@@ -16,7 +16,7 @@ function useIsMobile() {
    const models = [
     // Banner 1: EVYAN (SS) ALLOY
     {
-      name: "EVYAN (SS) ALLOY",
+      name: "EVYAN (SS)",
       subtitle: "Premium Passenger Model",
       model: "Stainless Steel Edition",
       features: "Durable & Corrosion-Resistant",
@@ -67,7 +67,7 @@ function useIsMobile() {
     },
     // Banner 4: EVYAN (MS) ALLOY
     {
-      name: "EVYAN MS ALLOY",
+      name: "EVYAN MS",
       subtitle: "Mild Steel Edition",
       model: "Passenger Model",
       features: "Durable & Efficient",
@@ -137,7 +137,7 @@ function useIsMobile() {
     },
     // Banner 8: LongRange200
     {
-      name: "LongRange200",
+      name: "L5N - Closed",
       subtitle: "T1250",
       model: "Euler Storm EV",
       features: "Har Load, Har Road",

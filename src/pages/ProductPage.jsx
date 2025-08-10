@@ -9,7 +9,7 @@ const vehicleData = {
   L3: {
     "EVYAN": [
       {
-        "Model Name": "EVYAN (MS) NORMAL",
+        "Model Name": "EVYAN (MS)",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
         "Battery": "135 Ah Eastman/Livguard",
@@ -22,7 +22,7 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       },
       {
-        "Model Name": "EVYAN (MS) ALLOY",
+        "Model Name": "EVYAN (MS)",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
         "Battery": "135 Ah Eastman/Livguard",
@@ -35,7 +35,7 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       },
       {
-        "Model Name": "EVYAN (SS) NORMAL",
+        "Model Name": "EVYAN (SS)",
         "Chassis": "Double Girder CRC SS",
         "Paint": "PT Liquid/ED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
@@ -51,7 +51,7 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       },
       {
-        "Model Name": "EVYAN (SS) ALLOY",
+        "Model Name": "EVYAN (SS)",
         "Chassis": "Double Girder CRC SS",
         "Paint": "PT Liquid/ED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
