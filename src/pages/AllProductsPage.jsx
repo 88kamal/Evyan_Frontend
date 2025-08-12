@@ -10,7 +10,7 @@ const allProducts = [
         description: 'Designed for comfortable city commuting with high range and low maintenance.',
     },
     {
-        name: 'Evyan Cargo E-Rickshaw',
+        name: 'Evyan Passenger E-Rickshaw',
         image: '../../images/2.png',
         description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
     },
@@ -23,11 +23,6 @@ const allProducts = [
         name: 'Evyan Premium Passenger Model',
         image: '../../images/4.png',
         description: 'Premium model with extended battery life and superior seating comfort for urban travel.',
-    },
-    {
-        name: 'Evyan Heavy-Duty Cargo Carrier',
-        image: '../../images/5.png',
-        description: 'Engineered for rugged cargo operations with reinforced chassis and extended load capacity.',
     },
     {
         name: 'Evyan Smart School Van',
@@ -45,29 +40,9 @@ const allProducts = [
         description: 'Eco-friendly model with solar charging panel integration.',
     },
     {
-        name: 'Evyan Cold Storage Carrier',
-        image: '../../images/9.png',
-        description: 'Special cargo rickshaw designed to transport temperature-sensitive goods.',
-    },
-    {
-        name: 'Evyan Mini Delivery EV',
-        image: '../../img/10.png',
-        description: 'Compact cargo e-rickshaw ideal for hyperlocal deliveries in tight spaces.',
-    },
-    {
         name: 'Evyan Tourist Ride Model',
         image: '../../img/11.png',
         description: 'Comfortable and stylish ride tailored for tourist zones and guided trips.',
-    },
-    {
-        name: 'Evyan Smart City Passenger',
-        image: '../../img/12.png',
-        description: 'Connected model with IoT integration for smart city infrastructure.',
-    },
-    {
-        name: 'Evyan Water Bottle Carrier',
-        image: '../../img/13.png',
-        description: 'Optimized cargo solution for 20L water bottle transport businesses.',
     },
     {
         name: 'Evyan MetroFeeder XL',
@@ -80,19 +55,9 @@ const allProducts = [
         description: 'Emergency-response rickshaw with stretcher space and medical compartment.',
     },
     {
-        name: 'Evyan Waste Collection Rickshaw',
-        image: '../../img/17.png',
-        description: 'Designed for municipal use — ideal for door-to-door waste collection.',
-    },
-    {
         name: 'Evyan Battery Swap Variant',
         image: '../../img/18.png',
         description: 'Fast battery swapping model for high turnaround operations.',
-    },
-    {
-        name: 'Evyan Compact EcoRide',
-        image: '../../img/19.png',
-        description: 'Entry-level EV with affordable pricing for new fleet owners.',
     },
 ];
 

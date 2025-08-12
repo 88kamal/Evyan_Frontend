@@ -7,6 +7,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Vehicle Data (Based on your JSON) ---
 const vehicleData = {
   L3: {
+     "EVYAN JANTA": [
+      {
+        "Model Name": "EVYAN JANTA",
+        "Motor": "BLDC 1KW",
+        "Controller": "24 T BLDC Indian",
+        "Battery": "LOCAL",
+        "Differential": "1:10 GR Indian",
+        "Charger": "15 Ah Indian Make",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Powder coated paint, Stepney Cover, Body Light, led fog light, FM etc",
+        "Seating Capacity": "Driver + 4 Passenger"
+      }
+    ],
     "EVYAN": [
       {
         "Model Name": "EVYAN (MS)",
@@ -114,20 +128,6 @@ const vehicleData = {
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
-        "Seating Capacity": "Driver + 4 Passenger"
-      }
-    ],
-    "EVYAN JANTA": [
-      {
-        "Model Name": "EVYAN JANTA",
-        "Motor": "BLDC 1KW",
-        "Controller": "24 T BLDC Indian",
-        "Battery": "LOCAL",
-        "Differential": "1:10 GR Indian",
-        "Charger": "15 Ah Indian Make",
-        "Shocker": "Hydraulic Shocker with Spring",
-        "Rim": "4*12 In BIS Certified",
-        "Accessories": "Powder coated paint, Stepney Cover, Body Light, led fog light, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       }
     ],
@@ -403,10 +403,10 @@ const ProductsPage = () => {
   // Map model types to images
   const modelImages = {
     // L3 Models
-    "EVYAN (MS) NORMAL": "/evyan-normal.png",
-    "EVYAN (MS) ALLOY": "/evyan-alloy.png",
-    "EVYAN (SS) NORMAL": "/evyan-ss-normal.png",
-    "EVYAN (SS) ALLOY": "/evyan-ss-alloy.png",
+    "EVYAN (MS)": "/evyan-normal.png",
+    "EVYAN ( MS )": "/evyan-alloy.png",
+    "EVYAN (SS)": "/evyan-ss-normal.png",
+    "EVYAN ( SS )": "/evyan-ss-alloy.png",
     "EVYAN GOLD (Auto Facia) NORMAL": "/gold-normal.png",
     "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
     "EVYAN GOLD li Premium": "/evyan gold li (premium).jpg",
@@ -426,10 +426,10 @@ const ProductsPage = () => {
   // Map model types to colors
   const modelColors = {
     // L3 Models
-    "EVYAN (MS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN (MS) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN (MS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN ( MS )": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN (SS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN (SS) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN ( SS )": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO (OPEN)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},

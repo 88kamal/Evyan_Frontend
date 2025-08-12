@@ -10,14 +10,14 @@ const products = [
     description: 'Designed for comfortable city commuting with high range and low maintenance.',
   },
   {
-    name: 'Evyan Cargo E-Rickshaw',
-    image: '../../images/2.png',
+    name: 'EVYAN LOADKRO (OPEN)',
+    image: '/loadkro-open.png',
     description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
   },
   {
-    name: 'Evyan School E-Rickshaw',
-    image: '../../images/3.png',
-    description: 'Safe and eco-friendly transportation option for school routes and institutions.',
+    name: 'EVYAN GARBAGE (Hydraulic)',
+    image: '/garbage-hydraulic.png',
+    description: 'Safe and eco-friendly Garbage vehicle with a power of hydraulic tipping.',
   },
 ];
 
