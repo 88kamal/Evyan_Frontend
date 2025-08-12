@@ -251,7 +251,7 @@ const HeroSection = () => {
       className={
         "relative w-full overflow-hidden bg-black " +
         (isMobile
-          ? " min-h-[79svh] max-h-screen"
+          ? "h- min-h-[79svh] "
           : "h-[100vh] min-h-[100svh] aspect-[16/7]")
       }
       onMouseEnter={() => setIsHovering(true)}
