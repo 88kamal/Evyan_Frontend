@@ -398,7 +398,7 @@ const ProductsPage = () => {
   const modelColors = {
     // L3 Models
     "EVYAN (MS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN (SS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN (SS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO (OPEN)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
