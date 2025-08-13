@@ -14,7 +14,7 @@ const SimpleSlider = () => {
  
 
   return (
-    <div className="relative w-full overflow-hidden min-h-[30vh] sm:min-h-screen">
+    <div className="relative w-full overflow-hidden h-[10vh] sm:min-h-screen">
       {/* Slide Container */}
       <div 
         className="flex transition-transform duration-500 ease-in-out"
@@ -23,9 +23,9 @@ const SimpleSlider = () => {
         {imagePaths.map((path, index) => (
           <div key={index} className="w-full flex-shrink-0">
             <img 
-              src={'../../hero.png'} 
+              src={'./../../new/10.jpg'} 
               alt={`Banner ${index + 1}`} 
-              className="w-full min-h-[30vh] sm:min-h-screen object-cover"
+              className="w-full h-[10vh] sm:min-h-screen object-cover"
             />
           </div>
         ))}

@@ -35,19 +35,7 @@ const vehicleData = {
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       },
-      {
-        "Model Name": "EVYAN (MS)",
-        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
-        "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
-        "Differential": "1:10 GR Indian",
-        "Charger": "18 Ah Indian Make",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
-        "Shocker": "Hydraulic Shocker with Spring",
-        "Rim": "4*12 In BIS Certified ALLOY",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
-        "Seating Capacity": "Driver + 4 Passenger"
-      },
+    
       {
         "Model Name": "EVYAN (SS)",
         "Chassis": "Double Girder CRC SS",
@@ -64,22 +52,7 @@ const vehicleData = {
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       },
-      {
-        "Model Name": "EVYAN (SS)",
-        "Chassis": "Double Girder CRC SS",
-        "Paint": "PT Liquid/ED Coated",
-        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
-        "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
-        "Differential": "1:10 GR Indian",
-        "Charger": "18 Ah Indian Make",
-        "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
-        "Shocker": "Hydraulic Shocker with Spring",
-        "Rim": "4*12 In BIS Certified ALLOY",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
-        "Seating Capacity": "Driver + 4 Passenger"
-      }
+   
     ],
     "EVYAN GOLD": [
       {
@@ -404,9 +377,7 @@ const ProductsPage = () => {
   const modelImages = {
     // L3 Models
     "EVYAN (MS)": "/evyan-normal.png",
-    "EVYAN ( MS )": "/evyan-alloy.png",
     "EVYAN (SS)": "/evyan-ss-normal.png",
-    "EVYAN ( SS )": "/evyan-ss-alloy.png",
     "EVYAN GOLD (Auto Facia) NORMAL": "/gold-normal.png",
     "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
     "EVYAN GOLD li Premium": "/evyan gold li (premium).jpg",
@@ -427,9 +398,7 @@ const ProductsPage = () => {
   const modelColors = {
     // L3 Models
     "EVYAN (MS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN ( MS )": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN (SS) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN ( SS )": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO (OPEN)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
@@ -440,7 +409,6 @@ const ProductsPage = () => {
 
     "EVYAN JANTA": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO LI": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
-    "EVYAN GOLD li Premium": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
 
 
 
@@ -454,9 +422,7 @@ const ProductsPage = () => {
   const modelCategories = {
     // L3 Models
     "EVYAN (MS) NORMAL": "Passenger Vehicle",
-    "EVYAN (MS) ALLOY": "Passenger Vehicle",
     "EVYAN (SS) NORMAL": "Premium Passenger Vehicle",
-    "EVYAN (SS) ALLOY": "Premium Passenger Vehicle",
     "EVYAN GOLD (Auto Facia) NORMAL": "Luxury Passenger Vehicle",
     "EVYAN GOLD (Auto Facia) ALLOY": "Luxury Passenger Vehicle",
     "EVYAN LOADKRO (OPEN)": "Cargo Vehicle",

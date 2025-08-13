@@ -17,7 +17,6 @@ const models = [
   // 1
   {
     name: "EVYAN (SS)",
-    subtitle: "Premium Passenger Model",
     model: "Stainless Steel Edition",
     features: "Durable & Corrosion-Resistant",
     tagline: "Aane de",
@@ -34,7 +33,6 @@ const models = [
   // 2
   {
     name: "EVYAN GOLD",
-    subtitle: "Auto Facia Edition",
     model: "Standard Passenger Model",
     features: "Comfortable & Efficient",
     tagline: "Aane de",
@@ -51,7 +49,6 @@ const models = [
   // 3
   {
     name: "EVYAN GARBAGE",
-    subtitle: "Hydraulic Edition",
     model: "Waste Management Solution",
     features: "Smart City Solution",
     tagline: "Clean City Initiative",
@@ -68,7 +65,6 @@ const models = [
   // 4
   {
     name: "EVYAN MS",
-    subtitle: "Mild Steel Edition",
     model: "Passenger Model",
     features: "Durable & Efficient",
     tagline: "Aane de",
@@ -85,7 +81,6 @@ const models = [
   // 5
   {
     name: "EVYAN GOLD",
-    subtitle: "Auto Facia Normal",
     model: "Economical Passenger Model",
     features: "Value for Money",
     tagline: "Aane de",
@@ -102,7 +97,6 @@ const models = [
   // 6
   {
     name: "EVYAN MS",
-    subtitle: "Standard Edition",
     model: "Passenger Model",
     features: "Reliable Performance",
     tagline: "Aane de",
@@ -118,8 +112,7 @@ const models = [
   },
   // 7
   {
-    name: "LOADKRO",
-    subtitle: "Open Loader",
+    name: "Evyan LOADKRO",
     model: "Cargo Model",
     features: "Heavy Duty Performance",
     tagline: "Har Load, Har Road",
@@ -136,8 +129,7 @@ const models = [
   // 8
   {
     name: "L5N - Closed",
-    subtitle: "T1250",
-    model: "Euler Storm EV",
+    model: "Evyan L5N - Closed",
     features: "Har Load, Har Road",
     tagline: "Long Range Cargo",
     description: "Cargo model with 125km range & 675kg capacity",
@@ -152,9 +144,8 @@ const models = [
   },
   // 9
   {
-    name: "T1250",
-    subtitle: "Passenger Edition",
-    model: "Euler Storm EV",
+    name: "L5N",
+    model: "Evyan L5M",
     features: "Comfort Ride, City Ready",
     tagline: "Aane de",
     description: "Passenger model with 125km range",
@@ -170,7 +161,6 @@ const models = [
   // 10
   {
     name: "EVYAN GOLD li",
-    subtitle: "Auto Facia Normal",
     model: "Economical Passenger Model",
     features: "Value for Money",
     tagline: "Aane de",
@@ -276,12 +266,7 @@ const HeroSection = () => {
                 `}
                 style={isMobile ? { maxWidth: "90vw" } : { maxWidth: "90%" }}
               >
-                <div className={`mb-2 flex items-center ${isLeftAlignedDesktop ? "justify-start" : "justify-start sm:justify-end"}`}>
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#00a7da] mr-2"></div>
-                  <span className="text-xs sm:text-base font-medium tracking-wide">
-                    {currentModel?.subtitle}
-                  </span>
-                </div>
+                
 
                 <h1 className="text-3xl xs:text-3xl sm:text-5xl font-bold mb-2 tracking-tight leading-tight drop-shadow-lg">
                   {currentModel?.name}
