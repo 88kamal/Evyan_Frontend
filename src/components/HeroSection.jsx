@@ -144,8 +144,8 @@ const models = [
   },
   // 9
   {
-    name: "L5N",
-    model: "Evyan L5N",
+    name: "L5M",
+    model: "Evyan L5M",
     features: "Comfort Ride, City Ready",
     tagline: "Aane de",
     description: "Passenger model with 125km range",

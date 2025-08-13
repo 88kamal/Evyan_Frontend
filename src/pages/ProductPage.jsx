@@ -380,7 +380,7 @@ const ProductsPage = () => {
     "EVYAN (SS)": "/evyan-ss-normal.png",
     "EVYAN GOLD (Auto Facia) NORMAL": "/gold-normal.png",
     "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
-    "EVYAN GOLD li Premium": "/evyan gold li (premium).jpg",
+    "EVYAN GOLD li Premium": "/evyan gold li (premium).png",
     "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
     "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
     "EVYAN LOADKRO LI": "/loadkro-li.png",
