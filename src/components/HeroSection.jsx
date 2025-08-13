@@ -241,7 +241,7 @@ const HeroSection = () => {
       className={
         "relative w-full overflow-hidden bg-black " +
         (isMobile
-          ? "h- min-h-[79svh] "
+          ? "aspect-[3/4]"
           : "h-[100vh] min-h-[100svh] aspect-[16/7]")
       }
       onMouseEnter={() => setIsHovering(true)}
@@ -326,7 +326,7 @@ const HeroSection = () => {
           src={bannerImages[currentIndex]}
           alt={currentModel?.name || ''}
           className={`absolute inset-0 w-full h-full select-none pointer-events-none ${
-            isMobile ? 'object-contain' : 'object-cover'
+            isMobile ? 'object-cover' : 'object-cover'
           } object-center bg-black`}
           draggable={false}
           custom={direction}
