@@ -52,6 +52,37 @@ const vehicleData = {
         "Rim": "4*12 In BIS Certified",
         "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Wiper, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
+      },
+      {
+        "Model Name": "EVYAN LI (MS)",
+        "Chassis": "Double Girder CRC",
+        "Paint": "CED Coated",
+        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
+        "Controller": "24 T PMSM Indian",
+        "Battery": "51.2V 105AH  LITHIUM-ION",
+        "Differential": "1:10 GR Indian",
+        "Charger": "20 Ah Indian Make",
+        "Converter": "Super Quality",
+        "Tyre": "3.75*12 in CEAT/RALCO",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Windscreen, FM etc",
+        "Seating Capacity": "Driver + 4 Passenger"
+      },
+      {
+        "Model Name": "EVYAN LI (SS)",
+         "Paint": "CED Coated",
+        "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
+        "Controller": "24 T PMSM Indian",
+        "Battery": "51.2V 105AH  LITHIUM-ION",
+        "Differential": "1:10 GR Indian",
+        "Charger": "20 Ah Indian Make",
+        "Converter": "Super Quality",
+        "Tyre": "3.75*12 in CEAT/RALCO",
+        "Shocker": "Hydraulic Shocker with Spring",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Windscreen, FM etc",
+        "Seating Capacity": "Driver + 4 Passenger"
       }
     ],
     "EVYAN GOLD": [
@@ -390,6 +421,9 @@ const ProductsPage = () => {
     "EVYAN GARBAGE (Semi-Hydraulic)": "/garbage-semi.png",
     "EVYAN GARBAGE (Hydraulic)": "/garbage-hydraulic.png",
     "EVYAN JANTA":"/janta.png",
+    "EVYAN LI (MS)":"/evyan-alloy.png",
+    "EVYAN LI (SS)":"/evyan-ss-alloy.png",
+
 
     // L5 Models
     "L5M": "/l5m.png",
@@ -412,6 +446,9 @@ const ProductsPage = () => {
 
     "EVYAN JANTA": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO LI": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+
+        "EVYAN LI (MS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN LI (SS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
 
 
 
