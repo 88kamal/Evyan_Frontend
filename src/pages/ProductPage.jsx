@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Vehicle Data (Based on your JSON) ---
 const vehicleData = {
   L3: {
-     "EVYAN JANTA": [
+    "EVYAN JANTA": [
       {
         "Model Name": "EVYAN JANTA",
         "Motor": "BLDC 1KW",
@@ -24,70 +24,70 @@ const vehicleData = {
     "EVYAN": [
       {
         "Model Name": "EVYAN (MS)",
+        "Chassis": "Double Girder CRC SS",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Wiper, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       },
-    
       {
         "Model Name": "EVYAN (SS)",
-        "Chassis": "Double Girder CRC SS",
-        "Paint": "PT Liquid/ED Coated",
+        "Chassis": "Double Girder CRC",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Wiper, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
-      },
-   
+      }
     ],
     "EVYAN GOLD": [
       {
-        "Model Name": "EVYAN GOLD (Auto Facia) NORMAL",
+        "Model Name": "EVYAN GOLD (Auto Facia)",
         "Chassis": "Double Girder CRC MS",
-        "Paint": "PT Liquid/ED Coated",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Wiper, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       },
       {
-        "Model Name": "EVYAN GOLD (Auto Facia) ALLOY",
+        "Model Name": "EVYAN GOLD LI (Auto Facia)",
         "Chassis": "Double Girder CRC MS",
-        "Paint": "PT Liquid/ED Coated",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "51.2V 105AH LITHIUM-ION",
         "Differential": "1:10 GR Indian",
-        "Charger": "18 Ah Indian Make",
+        "Charger": "20 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
-        "Rim": "4*12 In BIS Certified ALLOY",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Rim": "4*12 In BIS Certified",
+        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof Carrier, Wiper, Windscreen, FM etc",
         "Seating Capacity": "Driver + 4 Passenger"
       },
-      {
+       {
         "Model Name": "EVYAN GOLD li Premium",
         "Chassis": "Double Girder CRC MS",
         "Paint": "PT Liquid/ED Coated",
@@ -107,34 +107,35 @@ const vehicleData = {
     "EVYAN LOADKRO": [
       {
         "Model Name": "EVYAN LOADKRO (OPEN)",
-        "Chassis": "Double Girder CRC MS Loader 4*6 ft",
-        "Paint": "PT Liquid/ED Coated",
+        "Chassis": "Double Girder CRC MS Loader",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
-        "Charger": "18 Ah Indian Make",
+        "Charger": "20 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
-        "Loading Capacity": "600 Kg (Rated load)"
+        "Accessories": "Stepney Cover, Led lights, Floor Mat, Wiper, FM etc",
+        "Loading Capacity": "600 Kg (Rated load)",
+        "Dala Size": "5\" x 3.5\" / 6\" X 4\""
       },
       {
         "Model Name": "EVYAN LOADKRO (CLOSED)",
         "Chassis": "Double Girder CRC MS Loader 4*6 ft",
-        "Paint": "PT Liquid/ED Coated",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat, Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Led lights, Floor Mat, Wiper, FM etc",
         "Loading Capacity": "600 Kg (Rated load)"
       },
       {
@@ -143,7 +144,7 @@ const vehicleData = {
         "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "51.2V 105AH  LITHIUM-ION",
+        "Battery": "51.2V 105AH LITHIUM-ION",
         "Differential": "1:10 GR Indian",
         "Charger": "20 Ah Indian Make",
         "Converter": "Super Quality",
@@ -151,7 +152,8 @@ const vehicleData = {
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
         "Accessories": "Stepney Cover, Led lights, Floor Mat, Wiper, FM etc",
-        "Loading Capacity": "600 Kg (Rated load)"
+        "Loading Capacity": "600 Kg (Rated load)",
+        "Dala Size": "5\" x 3.5\""
       }
     ],
     "EVYAN GARBAGE": [
@@ -160,17 +162,17 @@ const vehicleData = {
         "Chassis": "Double Girder CRC MS Garbage (2 bins)",
         "Box Dimension": "1500mm*940mm*1050mm (l*w*h)",
         "Tipping Method": "Semi-Hydraulic",
-        "Paint": "PT Liquid/ED Coated",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat,  Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Led Lights, Floor Mat, Wiper, FM etc",
         "Loading Capacity": "600 Kg (Rated load) *"
       },
       {
@@ -179,17 +181,17 @@ const vehicleData = {
         "Box Dimension": "1500mm*940mm*1050mm (l*w*h)",
         "Tipping Method": "Hydraulic",
         "Tipping Abgle": "70 degree approx*",
-        "Paint": "PT Liquid/ED Coated",
+        "Paint": "CED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "140 Ah Eastman",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
-        "Tyre": "3.75*12 in CEAT/MRF/TVS",
+        "Tyre": "3.75*12 in CEAT/RALCO",
         "Shocker": "Hydraulic Shocker with Spring",
         "Rim": "4*12 In BIS Certified",
-        "Accessories": "Stepney Cover, Body Light, Floor Mat,  Roof inside cover, Wiper, Chequered floor, Windscreen, FM etc",
+        "Accessories": "Stepney Cover, Led Lights, Floor Mat, Wiper, FM etc",
         "Loading Capacity": "600 Kg (Rated load) *"
       }
     ]
@@ -294,6 +296,7 @@ const vehicleData = {
       }
     ]
   }
+
 };
 
 // --- Reusable Icon Components ---
@@ -378,9 +381,9 @@ const ProductsPage = () => {
     // L3 Models
     "EVYAN (MS)": "/evyan-normal.png",
     "EVYAN (SS)": "/evyan-ss-normal.png",
-    "EVYAN GOLD (Auto Facia) NORMAL": "/gold-normal.png",
-    "EVYAN GOLD (Auto Facia) ALLOY": "/gold-alloy.png",
-    "EVYAN GOLD li Premium": "/evyan gold li (premium).png",
+    "EVYAN GOLD (Auto Facia)": "/gold-normal.png",
+    "EVYAN GOLD LI (Auto Facia)": "/gold-alloy.png",
+    "EVYAN GOLD li Premium": "/goldlii.png",
     "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
     "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
     "EVYAN LOADKRO LI": "/loadkro-li.png",
@@ -399,8 +402,8 @@ const ProductsPage = () => {
     // L3 Models
     "EVYAN (MS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
     "EVYAN (SS)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN GOLD (Auto Facia) NORMAL": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
-    "EVYAN GOLD (Auto Facia) ALLOY": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GOLD (Auto Facia)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)" },
+    "EVYAN GOLD LI (Auto Facia)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO (OPEN)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO (CLOSED)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN GARBAGE (Semi-Hydraulic)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
