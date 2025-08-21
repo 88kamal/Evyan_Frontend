@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SimpleSlider from './BannerSlider';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
@@ -75,12 +76,12 @@ const AboutSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            <button className="bg-[#00a7da] hover:bg-[#008ab9] text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base">
+            <Link to={'/all-products'} className="bg-[#00a7da] hover:bg-[#008ab9] text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base">
               Explore Our Models
-            </button>
-            <button className="bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base">
+            </Link>
+            <a href="../images/Brochure.pdf" className="bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base">
               Download Brochure
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 

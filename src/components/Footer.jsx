@@ -6,6 +6,7 @@ import {
   Mail,
   PhoneCall,
   MapPin,
+  Clock,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +38,10 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm text-blue-100">
+             <li className="flex items-start gap-2">
+              <Clock size={18} className="mt-1 flex-shrink-0" />
+              <span>Available: Monday - Saturday, 9am - 5pm</span>
+            </li>
             <li className="flex items-start gap-2">
               <MapPin size={18} className="mt-1 flex-shrink-0" />
               <span>
