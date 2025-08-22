@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const products = [
   {
-    name: 'Evyan Passenger E-Rickshaw',
+    name: 'Evyan SS',
     image: '../../images/1.png',
     description: 'Designed for comfortable city commuting with high range and low maintenance.',
   },
@@ -72,7 +72,7 @@ const ProductRangeSection = () => {
 
               {/* Book Now Button */}
               <div className="px-6 pb-6">
-                <a href="tel:+918888888888">
+                <a href="tel:+919311859995">
                   <Button fullWidth className="bg-[#00a7da] hover:bg-blue-700 text-white text-base font-semibold">
                     Book Now
                   </Button>
