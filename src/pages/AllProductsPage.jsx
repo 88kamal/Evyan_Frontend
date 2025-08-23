@@ -5,61 +5,6 @@ import Layout from '../components/layout/Layout';
 
 // Original product data
 const allProducts = [
-  {
-    name: 'Evyan Passenger E-Rickshaw',
-    image: '../../images/1.png',
-    description: 'Designed for comfortable city commuting with high range and low maintenance.',
-  },
-  {
-    name: 'Evyan Passenger E-Rickshaw',
-    image: '../../images/2.png',
-    description: 'Built for delivery and logistics, offering a high load capacity and electric efficiency.',
-  },
-  {
-    name: 'Evyan School E-Rickshaw',
-    image: '../../images/3.png',
-    description: 'Safe and eco-friendly transportation option for school routes and institutions.',
-  },
-  {
-    name: 'Evyan Premium Passenger Model',
-    image: '../../images/4.png',
-    description: 'Premium model with extended battery life and superior seating comfort for urban travel.',
-  },
-  {
-    name: 'Evyan Smart School Van',
-    image: '../../images/6.png',
-    description: 'Smart vehicle with GPS and safety features for student transportation.',
-  },
-  {
-    name: 'Evyan Metro Shuttle',
-    image: '../../images/7.png',
-    description: 'Last-mile electric shuttle for metro stations and high footfall areas.',
-  },
-  {
-    name: 'Evyan Solar Hybrid Rickshaw',
-    image: '../../images/8.png',
-    description: 'Eco-friendly model with solar charging panel integration.',
-  },
-  {
-    name: 'Evyan Tourist Ride Model',
-    image: '../../img/11.png',
-    description: 'Comfortable and stylish ride tailored for tourist zones and guided trips.',
-  },
-  {
-    name: 'Evyan MetroFeeder XL',
-    image: '../../img/14.png',
-    description: 'Extra-large shuttle version designed to operate between metro and markets.',
-  },
-  {
-    name: 'Evyan Ambulance E-Rickshaw',
-    image: '../../img/16.png',
-    description: 'Emergency-response rickshaw with stretcher space and medical compartment.',
-  },
-  {
-    name: 'Evyan Battery Swap Variant',
-    image: '../../img/18.png',
-    description: 'Fast battery swapping model for high turnaround operations.',
-  },
 ];
 
 // Vehicle data for L3 and L5 categories
