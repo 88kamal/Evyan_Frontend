@@ -68,6 +68,20 @@ const Footer = () => {
         </div>
       </div>
 
+       {/* NATRAX Certification */}
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-blue-700 flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="flex items-center gap-3 bg-white/10 p-3 rounded-lg">
+          <img 
+            src="/verify.jpeg" 
+            alt="NATRAX Certification" 
+            className="h-30 w-auto object-contain"
+          />
+          <p className="text-sm text-blue-100">
+            All our vehicle models are certified by <span className="font-semibold">Natrax</span>
+          </p>
+        </div>
+      </div>
+
       {/* Divider & Bottom */}
       <div className="border-t border-blue-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-200">
         <p>&copy; {new Date().getFullYear()} Evyan. All rights reserved.</p>

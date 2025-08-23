@@ -10,57 +10,24 @@ const TestimonialsSection = () => {
  const testimonials = [
     {
       id: 1,
-      name: "Rajesh Kumar",
-      role: "Logistics Manager",
-      company: "Green Delivery Services",
+      name: "Ratnakar",
       rating: 5,
       comment: "The L5N-OPEN has transformed our last-mile delivery operations. With its impressive range and capacity, we've reduced costs by 40% while maintaining efficiency.",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+      avatar: "R.jpeg"
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      role: "Sustainability Director",
-      company: "EcoWaste Solutions",
+      name: "Anand",
       rating: 5,
       comment: "Our EVYAN GARBAGE hydraulic vehicles have significantly improved our waste collection efficiency. The hydraulic system makes dumping effortless for our operators.",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+      avatar: "A.jpeg"
     },
     {
       id: 3,
-      name: "Vikram Patel",
-      role: "Operations Head",
-      company: "City Municipal Corporation",
+      name: "Pradeep",
       rating: 4,
       comment: "We've deployed 15 units across the city. The silent operation is perfect for early morning collections, and maintenance costs are surprisingly low.",
-      avatar: "https://randomuser.me/api/portraits/men/62.jpg"
-    },
-    {
-      id: 4,
-      name: "Ananya Singh",
-      role: "Fleet Manager",
-      company: "Urban Clean Initiatives",
-      rating: 5,
-      comment: "The battery performance exceeded our expectations. After 8 months of heavy use, we haven't noticed any degradation in range or performance.",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
-    },
-    {
-      id: 5,
-      name: "Arjun Mehta",
-      role: "Facilities Director",
-      company: "Metro Property Management",
-      rating: 5,
-      comment: "Our maintenance team loves how easy these vehicles are to operate. The charging infrastructure was simple to set up and the ROI has been excellent.",
-      avatar: "https://randomuser.me/api/portraits/men/75.jpg"
-    },
-    {
-      id: 6,
-      name: "Deepika Reddy",
-      role: "Procurement Specialist",
-      company: "National Logistics Corp",
-      rating: 4,
-      comment: "The after-sales support has been outstanding. Quick response times and knowledgeable technicians have minimized our downtime.",
-      avatar: "https://randomuser.me/api/portraits/women/81.jpg"
+      avatar: "P.jpeg"
     }
   ];
 
@@ -164,8 +131,8 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{testimonials[activeIndex].name}</h3>
-                <p className="text-white/80 mt-1 text-sm sm:text-base">{testimonials[activeIndex].role}</p>
-                <p className="text-white/80 mt-1 text-sm sm:text-base">{testimonials[activeIndex].company}</p>
+                {/* <p className="text-white/80 mt-1 text-sm sm:text-base">{testimonials[activeIndex].role}</p> */}
+                {/* <p className="text-white/80 mt-1 text-sm sm:text-base">{testimonials[activeIndex].company}</p> */}
                 <div className="flex mt-3 sm:mt-4">
                   {renderStars(testimonials[activeIndex].rating)}
                 </div>
@@ -236,15 +203,7 @@ const TestimonialsSection = () => {
               <p className="text-gray-600 italic">
                 "{testimonial.comment.substring(0, 120)}..."
               </p>
-              <div className="mt-6 flex justify-between items-center">
-                <span className="text-sm text-gray-500">{testimonial.company}</span>
-                <button className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
-                  Read full
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
+          
             </motion.div>
           ))}
         </div>

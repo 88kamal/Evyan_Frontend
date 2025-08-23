@@ -65,7 +65,7 @@ export default function Navbars() {
                     {/* Logo */}
                     <Link to={'/'}>
                         <Typography className="text-xl font-bold flex items-center">
-                            <img src="/logo.png" alt="Devknus Logo" className="w-11 h-11 lg:w-24 lg:h-10" />
+                            <img src="/logo.png" alt="Devknus Logo" className="w-11 h-11 lg:w-16 lg:h-16" />
                         </Typography>
                     </Link>
 
