@@ -97,7 +97,8 @@ const AboutPage = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-cyan-600 font-bold mr-2">✓</span>
-                      <span>Li-Ion Batteries: Premium coverage</span>
+                      <span>Li-Ion Batteries: Premium coverage up to 60 months
+</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-cyan-600 font-bold mr-2">✓</span>

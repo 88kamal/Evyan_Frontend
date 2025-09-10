@@ -34,7 +34,7 @@ const ProductRangeSection = () => {
       >
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Product Range</h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Explore Evyan’s lineup of electric vehicles tailored for diverse needs—from personal commutes to cargo and institutional solutions.
+          Explore Evyan’s lineup of electric vehicles ranging from 2 wheelers to multi wheelers which are tailored for diverse needs—from personal commutes to cargo and institutional solutions.
         </p>
       </motion.div>
 

@@ -1,4 +1,4 @@
-// AboutSection.js
+// src/components/AboutSection.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import SimpleSlider from './BannerSlider';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const AboutSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-[#f0fcff] via-[#f0f9ff] to-[#e6f7ff] py-8 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
-      {/* Decorative elements - made responsive */}
+      {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 bg-[#00a7da]/10 rounded-full blur-xl lg:blur-3xl"></div>
         <div className="absolute bottom-4 left-4 w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 bg-[#ff6b6b]/10 rounded-full blur-xl lg:blur-3xl"></div>
@@ -15,6 +15,7 @@ const AboutSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center relative z-10">
+        
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -30,7 +31,7 @@ const AboutSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Transforming Urban Mobility with <span className="text-[#00a7da]">Evyan</span>
+              Transforming Last Mile Mobility with <span className="text-[#00a7da]">Evyan</span>
             </motion.h2>
             <motion.div 
               className="absolute bottom-2 left-0 w-32 h-2 bg-[#00a7da]/30 z-[-1]"
@@ -47,21 +48,23 @@ const AboutSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            At Evyan, we are revolutionizing urban transportation through innovative electric vehicles designed for India's unique needs. Our mission is to create sustainable mobility solutions that empower communities and protect our planet.
+            At NEMPL, we are revolutionizing last mile mobility through innovative electric vehicles designed for India's unique needs. 
+            Our mission is to create sustainable mobility solutions that empower communities and protect our planet.
           </motion.p>
           
           <div className="space-y-2 pt-2 md:pt-4">
             {[
               { icon: "⚡", text: "Backed by cutting-edge EV technology and eco-conscious engineering" },
-              { icon: "🔧", text: "Comprehensive after-sales network with 250+ service centers" },
-              { icon: "👥", text: "Trusted by 15,000+ drivers & fleet operators nationwide" },
-              { icon: "🌱", text: "Reducing carbon emissions by 45,000+ tons annually" }
+              { icon: "🔧", text: "Comprehensive after-sales network with wide service centers" },
+              { icon: "👥", text: "Trusted by multi thousand drivers & fleet operators nationwide" },
+              { icon: "🌱", text: "Expected to reduce carbon emissions by 45,000+ tons annually" }
             ].map((item, index) => (
               <motion.div
                 key={index}
                 className="flex items-start gap-3"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.7 + index * 0.1 }}
               >
                 <span className="text-xl p-1.5 sm:p-2 bg-white rounded-lg shadow-sm">{item.icon}</span>
@@ -73,19 +76,26 @@ const AboutSection = () => {
           <motion.div
             className="pt-4 md:pt-6 flex flex-wrap gap-3"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 1.2 }}
           >
-            <Link to={'/all-products'} className="bg-[#00a7da] hover:bg-[#008ab9] text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base">
+            <Link 
+              to={'/all-products'} 
+              className="bg-[#00a7da] hover:bg-[#008ab9] text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base"
+            >
               Explore Our Models
             </Link>
-            <a href="../images/Brochure.pdf" className="bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base">
+            <a 
+              href="../images/Brochure.pdf" 
+              className="bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
+            >
               Download Brochure
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Right Image */}
+        {/* Right Image / Banner Slider */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

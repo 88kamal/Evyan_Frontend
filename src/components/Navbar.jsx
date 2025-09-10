@@ -59,13 +59,13 @@ export default function Navbars() {
     ];
 
     return (
-        <div className="sticky inset-0 z-50 w-full bg-blue-50">
+        <div className="sticky inset-0 z-50 w-full bg-white">
             <Navbar className="w-full max-w-none shadow-md py-2 px-4 lg:px-5 lg:py-2.5 rounded-none relative">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     {/* Logo */}
                     <Link to={'/'}>
                         <Typography className="text-xl font-bold flex items-center">
-                            <img src="/logo.png" alt="Devknus Logo" className="w-11 h-11 lg:w-16 lg:h-16" />
+                            <img src="../../images/new-logo.png" alt="Logo" className="w-20 h-11 lg:w-24 lg:h-14" />
                         </Typography>
                     </Link>
 

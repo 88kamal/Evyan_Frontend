@@ -14,9 +14,13 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-[#00a7da] via-[#027193] to-[#632728] text-white py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-
         {/* About */}
         <div>
+
+            <div className="mb-4">
+          <img src="../../images/new-second-logo.png" alt="logo" className='w-40' />
+        </div>
+
           <h3 className="text-xl font-semibold mb-4">About Evyan</h3>
           <p className="text-sm leading-relaxed text-blue-100">
             Evyan is a leading manufacturer of eco-friendly electric rickshaws. Our mission is to provide sustainable, cost-effective mobility for a cleaner tomorrow.
@@ -40,13 +44,19 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-blue-100">
              <li className="flex items-start gap-2">
               <Clock size={18} className="mt-1 flex-shrink-0" />
-              <span>Available: Monday - Saturday, 9am - 5pm</span>
+              <span>Available: Monday - Saturday, 10am - 6pm</span>
             </li>
             <li className="flex items-start gap-2">
               <MapPin size={18} className="mt-1 flex-shrink-0" />
               <span>
                 Fact. 1: Plot no. 137, UV Extension, Ecotech II, <br />
                 Greater Noida - 201310, UP, India
+                <br/>
+
+<br/>
+
+                Basement Floor, House no-1861, Outram Line City, New
+Delhi, Central Delhi, Delhi, 110009
               </span>
             </li>
             <li className="flex items-start gap-2">
