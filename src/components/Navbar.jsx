@@ -65,7 +65,7 @@ export default function Navbars() {
                     {/* Logo */}
                     <Link to={'/'}>
                         <Typography className="text-xl font-bold flex items-center">
-                            <img src="../../images/new-logo.png" alt="Logo" className="w-20 h-11 lg:w-24 lg:h-14" />
+                            <img src="/logo.png" alt="Logo" className="w-20 h-11 lg:w-24 lg:h-14" />
                         </Typography>
                     </Link>
 

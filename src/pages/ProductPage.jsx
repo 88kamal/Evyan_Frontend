@@ -119,12 +119,12 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       },
        {
-        "Model Name": "EVYAN GOLD li Premium",
+        "Model Name": "EVYAN GOLD Premium li ",
         "Chassis": "Double Girder CRC MS",
         "Paint": "PT Liquid/ED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "51.2V 105AH LITHIUM-ION",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
@@ -414,7 +414,7 @@ const ProductsPage = () => {
     "EVYAN (SS)": "/evyan-ss-normal.png",
     "EVYAN GOLD (Auto Facia)": "/gold-normal.png",
     "EVYAN GOLD LI (Auto Facia)": "/gold-alloy.png",
-    "EVYAN GOLD li Premium": "/goldlii.png",
+    "EVYAN GOLD Premium li ": "/goldlii.png",
     "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
     "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
     "EVYAN LOADKRO LI": "/loadkro-li.png",
@@ -442,7 +442,7 @@ const ProductsPage = () => {
     "EVYAN LOADKRO (CLOSED)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN GARBAGE (Semi-Hydraulic)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN GARBAGE (Hydraulic)": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
-    "EVYAN GOLD li Premium": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
+    "EVYAN GOLD Premium li ": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
 
     "EVYAN JANTA": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},
     "EVYAN LOADKRO LI": { color: "from-blue-500 to-cyan-500", gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)"},

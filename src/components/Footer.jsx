@@ -7,6 +7,7 @@ import {
   PhoneCall,
   MapPin,
   Clock,
+  Linkedin,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -17,8 +18,9 @@ const Footer = () => {
         {/* About */}
         <div>
 
-            <div className="mb-4">
+            <div className="mb-4 flex  gap-4">
           <img src="../../images/new-second-logo.png" alt="logo" className='w-40' />
+           <img src="../../images/new-logo.png" alt="logo" className='w-40' />
         </div>
 
           <h3 className="text-xl font-semibold mb-4">About Evyan</h3>
@@ -96,9 +98,9 @@ Delhi, Central Delhi, Delhi, 110009
       <div className="border-t border-blue-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-200">
         <p>&copy; {new Date().getFullYear()} Evyan. All rights reserved.</p>
         <div className="flex gap-4">
-          <a href="#" className="hover:text-white"><Facebook size={18} /></a>
-          <a href="#" className="hover:text-white"><Instagram size={18} /></a>
-          <a href="#" className="hover:text-white"><Twitter size={18} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61566200741143" className="hover:text-white"><Facebook size={18} /></a>
+          <a href="https://www.instagram.com/navyabharatevyanmotorspvtltd/" className="hover:text-white"><Instagram size={18} /></a>
+          <a href="https://www.linkedin.com/in/navya-bharat-1947a432b/" className="hover:text-white"><Linkedin size={18} /></a>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
-// src/components/Finacer.jsx
-import React, { useEffect, useRef, useState } from "react";
+// src/components/Financer.jsx
+import React, { useState } from "react";
 
 const images = [
   "/finacer/1.png",
@@ -9,58 +9,42 @@ const images = [
   "/finacer/5.png",
 ];
 
-const Finacer = () => {
-  const scrollRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
+const Financer = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      if (!isPaused) {
-        container.scrollLeft += 1;
-
-        // loop back to start when end is reached
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-          container.scrollLeft = 0;
-        }
-      }
-    }, 20); // smaller = faster
-
-    return () => clearInterval(scrollInterval);
-  }, [isPaused]);
-
-  // toggle pause/resume
-  const handleClick = () => {
-    setIsPaused((prev) => !prev);
+  const handleImageClick = (index) => {
+    setSelectedImage(selectedImage === index ? null : index);
   };
 
   return (
-    <div className="w-full mt-10">
+    <div className="w-full mt-10 px-4 md:px-8">
       {/* Top heading */}
-      <h2 className="text-center text-2xl font-bold text-gray-800 mb-4">
-        Our Trusted Partners
+      <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8">
+        Our Trusted Financers
       </h2>
 
-      {/* Auto-scrolling logo strip */}
-      <div ref={scrollRef} className="w-full overflow-x-auto scrollbar-hide">
-        <div className="flex space-x-4 p-4">
-          {images.map((src, index) => (
+      {/* Responsive logo grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className={`relative bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform `}
+            onClick={() => handleImageClick(index)}
+          >
             <img
-              key={index}
               src={src}
-              alt={`finacer-${index}`}
-              onClick={handleClick}
-              className={`h-40 w-auto rounded-lg shadow-md object-cover flex-shrink-0 cursor-pointer transition-transform duration-200 ${
-                isPaused ? "scale-105" : "scale-100"
-              }`}
+              alt={`financer-${index}`}
+              className="w-full h-auto object-contain p-4 md:p-6 cursor-pointer"
+              style={{ aspectRatio: "16/9" }}
             />
-          ))}
-        </div>
+            
+       
+          </div>
+        ))}
       </div>
+
     </div>
   );
 };
 
-export default Finacer;
+export default Financer;

@@ -122,12 +122,12 @@ const vehicleData = {
         "Seating Capacity": "Driver + 4 Passenger"
       },
        {
-        "Model Name": "EVYAN GOLD li Premium",
+        "Model Name": "EVYAN GOLD Premium li ",
         "Chassis": "Double Girder CRC MS",
         "Paint": "PT Liquid/ED Coated",
         "Motor": "PMSM Indian make with Capacity upto 1.97 Kw",
         "Controller": "24 T PMSM Indian",
-        "Battery": "135 Ah Eastman/Livguard",
+        "Battery": "51.2V 105AH LITHIUM-ION",
         "Differential": "1:10 GR Indian",
         "Charger": "18 Ah Indian Make",
         "Converter": "Super Quality",
@@ -339,7 +339,7 @@ const modelImages = {
   "EVYAN (SS)": "/evyan-ss-normal.png",
   "EVYAN GOLD (Auto Facia)": "/gold-normal.png",
   "EVYAN GOLD LI (Auto Facia)": "/gold-alloy.png",
-  "EVYAN GOLD li Premium": "/goldlii.png",
+  "EVYAN GOLD Premium li ": "/goldlii.png",
   "EVYAN LOADKRO (OPEN)": "/loadkro-open.png",
   "EVYAN LOADKRO (CLOSED)": "/loadkro-closed.png",
   "EVYAN LOADKRO LI": "/loadkro-li.png",

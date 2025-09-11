@@ -25,7 +25,7 @@ const AboutPage = () => {
               className="text-center mb-12"
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-                About <span className="text-cyan-600">Evyan</span>
+                About <span className="text-cyan-600">NEMPL</span>
               </h1>
               <div className="h-1 w-24 bg-cyan-500 mx-auto rounded-full"></div>
             </motion.div>

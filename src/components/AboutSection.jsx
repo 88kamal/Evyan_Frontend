@@ -31,7 +31,7 @@ const AboutSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Transforming Last Mile Mobility with <span className="text-[#00a7da]">Evyan</span>
+              Transforming Last Mile Mobility with <span className="text-[#00a7da]">NEMPL</span>
             </motion.h2>
             <motion.div 
               className="absolute bottom-2 left-0 w-32 h-2 bg-[#00a7da]/30 z-[-1]"
