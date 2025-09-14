@@ -25,7 +25,7 @@ const Footer = () => {
 
           <h3 className="text-xl font-semibold mb-4">About Evyan</h3>
           <p className="text-sm leading-relaxed text-blue-100">
-            Evyan is a leading manufacturer of eco-friendly electric rickshaws. Our mission is to provide sustainable, cost-effective mobility for a cleaner tomorrow.
+          NEMPL is a leading manufacturer of eco-friendly electric vehicles ranging from 2 wheelers to multi wheelers. Our mission is to provide sustainable, cost-effective mobility for a cleaner tomorrow.
           </p>
         </div>
 
