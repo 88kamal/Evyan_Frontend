@@ -1,10 +1,10 @@
 import React from 'react'
-import UserProfile from '../../../components/UserProfile'
+import AdminUserProfile from '../../../components/common/AdminUserProfile'
 
 const AdminProfile = () => {
   return (
     <>
-    <UserProfile/>
+    <AdminUserProfile/>
     </>
   )
 }
