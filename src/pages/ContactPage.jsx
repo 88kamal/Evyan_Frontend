@@ -68,12 +68,8 @@ const ContactPage = () => {
               <h3 className="text-xl font-semibold text-blue-800 mb-4">Business Hours</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-blue-700">
-                  <p className="font-medium">Monday - Friday</p>
-                  <p>9:00 AM - 6:00 PM</p>
-                </div>
-                <div className="text-blue-700">
-                  <p className="font-medium">Saturday</p>
-                  <p>10:00 AM - 4:00 PM</p>
+                  <p className="font-medium">Monday - Saturday</p>
+                  <p>10:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
