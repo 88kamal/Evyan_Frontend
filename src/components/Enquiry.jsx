@@ -13,27 +13,22 @@ import {
 } from "@material-tailwind/react";
 
 const productOptions = [
-  { value: 'L5N - OPEN', label: 'L5N - OPEN' },
-  { value: 'EVYAN GARBAGE-Semi-Hydraulic', label: 'EVYAN GARBAGE-Semi-Hydraulic' },
-  { value: 'EVYAN GARBAGE-Hydraulic', label: 'EVYAN GARBAGE-Hydraulic' },
-  { value: 'Evyan Passenger E-Rickshaw', label: 'Evyan Passenger E-Rickshaw' },
-  { value: 'Evyan Cargo E-Rickshaw', label: 'Evyan Cargo E-Rickshaw' },
-  { value: 'Evyan School E-Rickshaw', label: 'Evyan School E-Rickshaw' },
-  { value: 'Evyan Premium Passenger Model', label: 'Evyan Premium Passenger Model' },
-  { value: 'Evyan Heavy-Duty Cargo Carrier', label: 'Evyan Heavy-Duty Cargo Carrier' },
-  { value: 'Evyan Smart School Van', label: 'Evyan Smart School Van' },
-  { value: 'Evyan Metro Shuttle', label: 'Evyan Metro Shuttle' },
-  { value: 'Evyan Solar Hybrid Rickshaw', label: 'Evyan Solar Hybrid Rickshaw' },
-  { value: 'Evyan Cold Storage Carrier', label: 'Evyan Cold Storage Carrier' },
-  { value: 'Evyan Mini Delivery EV', label: 'Evyan Mini Delivery EV' },
-  { value: 'Evyan Tourist Ride Model', label: 'Evyan Tourist Ride Model' },
-  { value: 'Evyan Smart City Passenger', label: 'Evyan Smart City Passenger' },
-  { value: 'Evyan Water Bottle Carrier', label: 'Evyan Water Bottle Carrier' },
-  { value: 'Evyan MetroFeeder XL', label: 'Evyan MetroFeeder XL' },
-  { value: 'Evyan Ambulance E-Rickshaw', label: 'Evyan Ambulance E-Rickshaw' },
-  { value: 'Evyan Waste Collection Rickshaw', label: 'Evyan Waste Collection Rickshaw' },
-  { value: 'Evyan Battery Swap Variant', label: 'Evyan Battery Swap Variant' },
-  { value: 'Evyan Compact EcoRide', label: 'Evyan Compact EcoRide' },
+  { value: 'EVYAN JANTA', label: 'EVYAN JANTA' },
+  { value: 'EVYAN (MS)', label: 'EVYAN (MS)' },
+  { value: 'EVYAN (SS)', label: 'EVYAN (SS)' },
+  { value: 'EVYAN LI (MS)', label: 'EVYAN LI (MS)' },
+  { value: 'EVYAN LI (SS)', label: 'EVYAN LI (SS)' },
+  { value: 'EVYAN GOLD (Auto Facia)', label: 'EVYAN GOLD (Auto Facia)' },
+  { value: 'EVYAN GOLD LI (Auto Facia)', label: 'EVYAN GOLD LI (Auto Facia)' },
+  { value: 'EVYAN GOLD Premium li', label: 'EVYAN GOLD Premium li' },
+  { value: 'EVYAN LOADKRO (OPEN)', label: 'EVYAN LOADKRO (OPEN)' },
+  { value: 'EVYAN LOADKRO (CLOSED)', label: 'EVYAN LOADKRO (CLOSED)' },
+  { value: 'EVYAN LOADKRO LI', label: 'EVYAN LOADKRO LI' },
+  { value: 'EVYAN GARBAGE (Semi-Hydraulic)', label: 'EVYAN GARBAGE (Semi-Hydraulic)' },
+  { value: 'EVYAN GARBAGE (Hydraulic)', label: 'EVYAN GARBAGE (Hydraulic)' },
+  { value: 'L5M', label: 'L5M' },
+  { value: 'L5N - CLOSED', label: 'L5N - CLOSED' },
+  { value: 'L5N - OPEN', label: 'L5N - OPEN' }
 ];
 
 const Enquiry = () => {
