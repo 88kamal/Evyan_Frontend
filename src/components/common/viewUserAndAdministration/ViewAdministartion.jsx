@@ -1,13 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { ArrowPathIcon, MagnifyingGlassIcon, TableCellsIcon, ListBulletIcon, ArrowsPointingInIcon, ArrowsPointingOutIcon } from "@heroicons/react/24/outline";
 import {
-    CardHeader,
     Input,
     Typography,
     Button,
     Spinner,
-    Card,
-    CardBody,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -22,15 +19,13 @@ export default function ViewAdministration() {
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(25);
     const [viewType, setViewType] = useState(() => {
-        // Initialize from localStorage or default to 'table'
         return localStorage.getItem("viewType") || "table";
     });
 
-    const [isFullscreen, setIsFullscreen] = useState(false); // Track fullscreen status
+    const [isFullscreen, setIsFullscreen] = useState(false);
 
-    //sending role 12 as to fetch all the role associated with the administration i.e 3,4,5
+    // sending role 12 as to fetch all the role associated with the administration i.e 3,4,5
     const role = 12;
-
 
     // Pass the search, page, and limit as parameters to the query
     const { data: users, error, isLoading, refetch } = useGetUsersQuery({ search, role, page, limit });
@@ -50,21 +45,18 @@ export default function ViewAdministration() {
         toast.success(`${text} copied!`);
     };
 
-    // Function to toggle view type
     const toggleView = () => {
         const newViewType = viewType === "table" ? "list" : "table";
         setViewType(newViewType);
-        localStorage.setItem("viewType", newViewType); // Save to localStorage
+        localStorage.setItem("viewType", newViewType);
     };
 
     useEffect(() => {
-        // Sync state with localStorage in case of external changes (optional safeguard)
         const storedViewType = localStorage.getItem("viewType");
         if (storedViewType && storedViewType !== viewType) {
             setViewType(storedViewType);
         }
     }, []);
-
 
     const toggleFullscreen = () => {
         if (!isFullscreen) {
@@ -74,9 +66,10 @@ export default function ViewAdministration() {
         }
         setIsFullscreen(!isFullscreen);
     };
+
     return (
         <div className="h-full w-full bg-white pt-1 rounded-md border border-purple-300">
-            <div className="rounded-none  border-b border-purple-300 px-2 py-1">
+            <div className="rounded-none border-b border-purple-300 px-2 py-1">
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:gap-8">
                     <div>
                         <Typography variant="h5" color="blue-gray">
@@ -95,8 +88,7 @@ export default function ViewAdministration() {
                                 onChange={(e) => setSearch(e.target.value)}
                                 color="purple"
                                 icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-                                style={{ fontSize: '16px' }} // Add this to prevent zooming
-
+                                style={{ fontSize: '16px' }}
                             />
                         </div>
                         <Button
@@ -107,7 +99,7 @@ export default function ViewAdministration() {
                             onClick={refetch}
                         >
                             <ArrowPathIcon className="h-5 w-5" />
-                            <p >Refresh</p>
+                            <p>Refresh</p>
                         </Button>
                         <Button
                             variant=""
@@ -121,7 +113,7 @@ export default function ViewAdministration() {
                             ) : (
                                 <TableCellsIcon className="h-5 w-5" />
                             )}
-                            <p >
+                            <p>
                                 {viewType === "table" ? "List View" : "Table View"}
                             </p>
                         </Button>
@@ -137,7 +129,7 @@ export default function ViewAdministration() {
                             ) : (
                                 <ArrowsPointingOutIcon className="h-5 w-5" />
                             )}
-                            <span className=" hidden lg:block sm:block md:block">{isFullscreen ? "Exit Fullscreen" : "Fullscreen"}</span>
+                            <span className="hidden lg:block sm:block md:block">{isFullscreen ? "Exit Fullscreen" : "Fullscreen"}</span>
                         </Button>
                     </div>
                 </div>
@@ -157,7 +149,7 @@ export default function ViewAdministration() {
                                 alt=""
                             />
                         </div>
-                        <h1 className="text-center" color="red">{error?.data?.error}</h1>
+                        <h1 className="text-center text-red-500">{error?.data?.error}</h1>
                     </div>
                 ) : viewType === "table" ? (
                     <table className="w-full min-w-max table-auto text-left">
@@ -182,27 +174,27 @@ export default function ViewAdministration() {
                         <tbody>
                             {users?.data?.map(
                                 ({ _id, name, email, mobileNumber, role }, index) => (
-                                    <tr key={index} className="hover:bg-purple-50/50 cursor-pointer">
-                                        <td className="px-5  border-l border-r border-b border-purple-300">
+                                    <tr key={_id} className="hover:bg-purple-50/50 cursor-pointer">
+                                        <td className="px-5 border-l border-r border-b border-purple-300">
                                             {index + 1 + (page - 1) * limit}.
                                         </td>
                                         <td className="px-5 py-2 text-black border-l border-r border-b border-purple-300 capitalize">
                                             {name ? name : 'Not-Set'}
                                         </td>
                                         <td
-                                            className="px-5  border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
+                                            className="px-5 border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
                                             onClick={() => handleCopy(email)}
                                         >
                                             {email ? email : 'Not-Set'}
                                         </td>
                                         <td
-                                            className="px-5  border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
+                                            className="px-5 border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
                                             onClick={() => handleCopy(mobileNumber)}
                                         >
                                             {mobileNumber}
                                         </td>
                                         <td
-                                            className="px-5  border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
+                                            className="px-5 border-l border-r border-b border-purple-300 hover:text-purple-700 text-black"
                                         >
                                             {
                                                 role === 1 ? "Director" :
@@ -210,10 +202,10 @@ export default function ViewAdministration() {
                                                         role === 4 ? "Blog Manager" : ""
                                             }
                                         </td>
-                                        <td className="px-5  border-l border-r border-b border-purple-300">
-                                            <EditUserModal id={_id} refetch={refetch} />
+                                        <td className="px-5 border-l border-r border-b border-purple-300">
+                                            <EditUserModal user={{ _id, name, email, mobileNumber, role }} refetch={refetch} />
                                         </td>
-                                        <td className="px-5  border-l border-r border-b border-purple-300">
+                                        <td className="px-5 border-l border-r border-b border-purple-300">
                                             <DeleteUserModal id={_id} refetch={refetch} />
                                         </td>
                                     </tr>
@@ -243,7 +235,7 @@ export default function ViewAdministration() {
                                         }
                                     </Typography>
                                     <div className="flex items-center justify-between mt-4 rounded-b-lg bg-purple-50">
-                                        <EditUserModal id={_id} refetch={refetch} />
+                                        <EditUserModal user={{ _id, name, email, mobileNumber, role }} refetch={refetch} />
                                         <DeleteUserModal id={_id} refetch={refetch} />
                                     </div>
                                 </div>

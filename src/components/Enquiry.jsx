@@ -1,3 +1,4 @@
+// src/components/Enquiry.jsx
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import { State, City } from 'country-state-city';
@@ -11,6 +12,7 @@ import {
   Input,
   Typography,
 } from "@material-tailwind/react";
+import { useSubmitProductQueryMutation } from "../redux/slices/productQuerySlice";
 
 const productOptions = [
   { value: 'EVYAN JANTA', label: 'EVYAN JANTA' },
@@ -35,7 +37,6 @@ const Enquiry = () => {
   const [open, setOpen] = useState(true);
   const [stateOptions, setStateOptions] = useState([]);
   const [cityOptionsList, setCityOptionsList] = useState([]);
-
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
@@ -43,6 +44,8 @@ const Enquiry = () => {
     city: null,
     product: null,
   });
+
+  const [submitProductQuery, { isLoading }] = useSubmitProductQueryMutation();
 
   useEffect(() => {
     const states = State.getStatesOfCountry('IN');
@@ -69,20 +72,24 @@ const Enquiry = () => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const message = `Hello, I would like to enquire about the following product:\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nState: ${formData.state?.label}\nCity: ${formData.city?.label}\nProduct: ${formData.product?.label}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+919311859995&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
+    try {
+      await submitProductQuery({
+        name: formData.name,
+        mobile: formData.mobile,
+        state: formData.state?.label,
+        city: formData.city?.label,
+        product: formData.product?.label,
+      }).unwrap();
 
-    setOpen(false);
-    setFormData({
-      name: '',
-      mobile: '',
-      state: null,
-      city: null,
-      product: null,
-    });
+      alert("✅ Enquiry submitted successfully!");
+      setOpen(false);
+      setFormData({ name: '', mobile: '', state: null, city: null, product: null });
+    } catch (err) {
+      console.error(err);
+      alert("❌ Failed to submit enquiry");
+    }
   };
 
   return (
@@ -141,12 +148,8 @@ const Enquiry = () => {
       </DialogBody>
 
       <DialogFooter>
-        <Button
-          color="blue"
-          onClick={handleSubmit}
-          className="w-full"
-        >
-          Submit Enquiry
+        <Button color="blue" onClick={handleSubmit} className="w-full" disabled={isLoading}>
+          {isLoading ? "Submitting..." : "Submit Enquiry"}
         </Button>
       </DialogFooter>
     </Dialog>
