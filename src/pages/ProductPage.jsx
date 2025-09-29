@@ -515,7 +515,7 @@ const ProductsPage = () => {
 
   const handleWhatsAppEnquiry = (productName) => {
     const message = `Hello, I'm interested in your ${productName} vehicle. Could you provide more information?`;
-    window.open(`https://api.whatsapp.com/send?phone=+918292417430&text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=+919311859997&text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const ProductCard = ({ product, onViewDetails }) => {
